@@ -7,10 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "KMCountView.h"
 
 @interface KMAppDelegate : NSObject <NSApplicationDelegate>
 
+
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSWindow *slidewindow;
+@property (assign) IBOutlet KMCountView *slideview;
+@property (nonatomic, weak)IBOutlet NSSegmentedControl *showsegment;
+
+
+
+-(IBAction)showSlide:(id)sender;
 
 
 

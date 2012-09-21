@@ -9,7 +9,7 @@
 #ifndef TimeWarp_GlobalHeader_h
 #define TimeWarp_GlobalHeader_h
 
-#define Transblack [NSColor colorWithCalibratedRed:0.0f green:0.0f blue:0.0f alpha:0.5f]
+#define Transblack [NSColor colorWithCalibratedRed:0.0f green:0.0f blue:0.0f alpha:0.65f]
 
 
 #endif

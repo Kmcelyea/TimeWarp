@@ -158,7 +158,7 @@
     
     
     
-    NSString * local = [NSString stringWithFormat:@"%ld:%ld:%@ %@", [self currentHour],[self currentMinute],secondpadding, [self LocalTZAbbreviation]];
+    NSString * local = [NSString stringWithFormat:@"%ld:%@:%@ %@", [self currentHour],minutepadding,secondpadding, [self LocalTZAbbreviation]];
     [_LocalTime setStringValue:local];
     NSString * saveAbbreviation = [self LocalTZAbbreviation];
     
