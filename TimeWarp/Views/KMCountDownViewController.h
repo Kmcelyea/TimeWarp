@@ -25,6 +25,7 @@
 @property (nonatomic, weak)IBOutlet NSTextField *timerhour;
 @property (nonatomic, weak)IBOutlet NSTextField *timermin;
 @property (nonatomic, weak)IBOutlet NSTextField *timersec;
+@property (nonatomic, weak)IBOutlet NSTextField *tilldate;
 
 
 

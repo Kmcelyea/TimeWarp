@@ -23,7 +23,12 @@
 - (void)awakeFromNib{
     [_datepicker setDateValue:[NSDate date]];
     [_datepicker setMinDate:[NSDate date]];
-    
+    //NSTimeZone *local = [NSTimeZone localTimeZone];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSLocale *locale = [NSLocale currentLocale];
+    [_datepicker setTimeZone:[calendar timeZone]];
+    [_datepicker setLocale:locale];
+    [_datepicker setCalendar:calendar];
 }
 
 
@@ -35,18 +40,24 @@
     switch (clickedSegmentTag)
     {
         case 0:
-            NSLog(@"%@, %@", [_timebox objectValueOfSelectedItem], [_datepicker dateValue]);
+        {
+            //NSLog(@"%@, %@", [_timebox objectValueOfSelectedItem], [_datepicker dateValue]);
             counttime = [NSTimer scheduledTimerWithTimeInterval:1.0
                                              target:self
                                            selector:@selector(updateCount:)
                                            userInfo:nil
                                             repeats:YES];
+            
+         }
             break;
+       
         case 1:
+        {
             [counttime invalidate];
+        }
             break;
             
-        default:
+        default:{}
             break;
     }
     
@@ -55,20 +66,18 @@
 
 - (void)updateCount:(NSTimer *)timer {
     
+    NSString * tillstring = [NSString stringWithFormat:@"Until %@",[_datepicker dateValue]];
+    NSString * formattedtill = [tillstring stringByReplacingOccurrencesOfString:@"+0000" withString:@""];
+    NSString * formattedtime = [formattedtill substringWithRange:NSMakeRange(17, 2)];
+    NSInteger timed = [[formattedtime stringByReplacingOccurrencesOfString:@" " withString:@""]intValue];
+    NSInteger correcttimed = timed - 5;
+    NSString *integerstring = [NSString stringWithFormat:@"%ld", correcttimed];
+    NSString * finishedtime = [formattedtill stringByReplacingCharactersInRange:NSMakeRange(17, 2) withString:integerstring];
     
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-    //[dateFormatter setTimeStyle:NSDateFormatterShortStyle];
-    NSString * datestring = [NSString stringWithFormat:@"%@",[_datepicker dateValue]];
-    NSString * nowdatestring = [NSString stringWithFormat:@"%@",[NSDate date]];
-    NSLog(@"datestring %@",datestring);
-    NSLog(@"nowdatestring %@",nowdatestring);
-    NSDate * now = [dateFormatter dateFromString:nowdatestring];
-    NSDate * then = [dateFormatter dateFromString:datestring];
-    NSTimeInterval futureCombined = [then timeIntervalSinceDate:now];
-    NSLog(@"%f combined", futureCombined);
-    
+    [_tilldate setStringValue:finishedtime];
+    NSLog(@"%@ formattedtill",formattedtime);
+    NSLog(@"%@ dateValue", [_datepicker dateValue]);
+    [_datepicker setDateValue:[_datepicker dateValue]];
     
     NSDateComponents * components = [[NSCalendar currentCalendar] components: NSDayCalendarUnit
                                                  fromDate:[NSDate date] toDate:[_datepicker dateValue] options: 0];
@@ -98,10 +107,10 @@
     }
     
     
-    NSLog(@"%ld day", days );
-    NSLog(@"%ld hour", hour );
-    NSLog(@"%ld min", min );
-    NSLog(@"%ld sec", sec );
+    //NSLog(@"%ld day", days );
+    //NSLog(@"%ld hour", hour );
+    //NSLog(@"%ld min", min );
+    //NSLog(@"%ld sec", sec );
     
     if(days >= 2){
         
@@ -138,17 +147,20 @@
     
     [counttime invalidate];
     
-    NSString * daystring = [NSString stringWithFormat:@"DD"];
+    NSString * daystring = [NSString stringWithFormat:@"Days"];
     [_timerday setStringValue:daystring];
 
-    NSString * hour = [NSString stringWithFormat:@"HH"];
+    NSString * hour = [NSString stringWithFormat:@"Hours"];
     [_timerhour setStringValue:hour];
     
-    NSString * min = [NSString stringWithFormat:@"MM"];
+    NSString * min = [NSString stringWithFormat:@"Minutes"];
     [_timermin setStringValue:min];
     
-    NSString * sec = [NSString stringWithFormat:@"SS"];
+    NSString * sec = [NSString stringWithFormat:@"Seconds"];
     [_timersec setStringValue:sec];
+    
+    NSString * till = [NSString stringWithFormat:@"Target Date"];
+    [_tilldate setStringValue:till];
     
     
 }
