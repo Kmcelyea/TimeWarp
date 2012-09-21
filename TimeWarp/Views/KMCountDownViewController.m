@@ -66,6 +66,8 @@
 
 - (void)updateCount:(NSTimer *)timer {
     
+    if (![storedate isEqualToDate:[_datepicker dateValue]]){
+    
     NSString * tillstring = [NSString stringWithFormat:@"Until %@",[_datepicker dateValue]];
     NSString * formattedtill = [tillstring stringByReplacingOccurrencesOfString:@"+0000" withString:@""];
     NSString * formattedtime = [formattedtill substringWithRange:NSMakeRange(17, 2)];
@@ -78,6 +80,8 @@
     NSLog(@"%@ formattedtill",formattedtime);
     NSLog(@"%@ dateValue", [_datepicker dateValue]);
     [_datepicker setDateValue:[_datepicker dateValue]];
+    storedate = [_datepicker dateValue];
+    }
     
     NSDateComponents * components = [[NSCalendar currentCalendar] components: NSDayCalendarUnit
                                                  fromDate:[NSDate date] toDate:[_datepicker dateValue] options: 0];

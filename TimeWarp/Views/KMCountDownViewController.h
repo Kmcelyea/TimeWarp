@@ -13,6 +13,7 @@
     NSString *secondpadding;
     NSString *minutepadding;
     NSTimer *counttime;
+    NSDate *storedate;
     
 }
 
