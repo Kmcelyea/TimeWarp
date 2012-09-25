@@ -14,7 +14,15 @@
     NSString *minutepadding;
     NSTimer *counttime;
     NSDate *storedate;
-    
+    NSDate *correctDate;
+    NSString *combostring;
+    NSString *displayDate;
+    int counterseconds;
+    int counterminutes;
+    int counterhours;
+    NSString * counterSecondsPadding;
+    NSString * counterMinutesPadding;
+    NSString * counterHoursPadding;
 }
 
 
@@ -27,6 +35,7 @@
 @property (nonatomic, weak)IBOutlet NSTextField *timermin;
 @property (nonatomic, weak)IBOutlet NSTextField *timersec;
 @property (nonatomic, weak)IBOutlet NSTextField *tilldate;
+@property (nonatomic, strong)NSString *correctDateString;
 
 
 

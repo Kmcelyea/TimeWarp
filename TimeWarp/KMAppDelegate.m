@@ -12,7 +12,8 @@
 
 
 
-
+#pragma mark -
+#pragma mark Implementation
 @implementation KMAppDelegate
 
 
@@ -24,7 +25,8 @@
     return self;
 }
 
-
+#pragma mark -
+#pragma mark Finished Launching
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 
@@ -39,7 +41,8 @@
     
 }
 
-
+#pragma mark -
+#pragma mark Action Show Count Down Window
 -(IBAction)showSlide:(id)sender {
     
     NSInteger selectedSegment = [sender selectedSegment];

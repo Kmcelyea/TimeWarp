@@ -8,22 +8,28 @@
 
 #import "KMTimeView.h"
 
+#pragma mark -
+#pragma mark Private Interface Declaractions
 @interface KMTimeView ()
 
 
 
 @end
 
+#pragma mark -
+#pragma mark Initialization
 @implementation KMTimeView
 @synthesize LocalTime = _LocalTime;
 @synthesize localcounter = _localcounter;
+
 
 -(void)awakeFromNib{
     [self loadViewTimes];
     
 }
 
-
+#pragma mark -
+#pragma mark Load View for Times
 -(void)loadViewTimes {
     
     if ([self currentSecond]<=10) {
@@ -140,6 +146,8 @@
 
 }
 
+#pragma mark -
+#pragma mark Update Times
 -(void)updateTimes:(NSTimer *)timer {
     
     if ([self currentSecond]<=10) {
@@ -230,6 +238,8 @@
     
 }
 
+#pragma mark -
+#pragma mark Current time component methods
 -(NSInteger)currentHour {
     
     NSDate *now = [NSDate date];
