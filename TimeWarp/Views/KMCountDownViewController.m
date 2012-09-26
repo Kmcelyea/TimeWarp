@@ -43,7 +43,7 @@
     {
         case 0:
         {
-            counttime = [NSTimer scheduledTimerWithTimeInterval:1.0
+            _counttime = [NSTimer scheduledTimerWithTimeInterval:1.0
                                              target:self
                                            selector:@selector(updateCount:)
                                            userInfo:nil
@@ -54,7 +54,7 @@
        
         case 1:
         {
-            [counttime invalidate];
+            [_counttime invalidate];
             
             NSString * daystring = [NSString stringWithFormat:@"Days"];
             [_timerday setStringValue:daystring];
@@ -220,7 +220,7 @@
 #pragma mark -
 #pragma mark End of Count Down
     if (seconds == 0) {
-        [counttime invalidate];
+        [_counttime invalidate];
         NSAlert * non = [NSAlert alertWithMessageText:@"Finished Count Down!" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
         [non runModal];
     }
@@ -234,7 +234,7 @@
 #pragma mark clear method
 -(IBAction)clearCount:(id)sender {
     
-    [counttime invalidate];
+    [_counttime invalidate];
     
     NSString * daystring = [NSString stringWithFormat:@"Days"];
     [_timerday setStringValue:daystring];

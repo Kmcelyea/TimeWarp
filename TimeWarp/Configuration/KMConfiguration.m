@@ -23,45 +23,18 @@
     self = [super init];
     if(self)
     {
-       
 
-        // load the default values for the user defaults
-        userDefaultsValuesPath=[[NSBundle mainBundle] pathForResource:@"ColorScheme"
-                                                               ofType:@"plist"];
+        userDefaultsValuesPath=[[NSBundle mainBundle] pathForResource:@"ColorScheme" ofType:@"plist"];
         userDefaultsValuesDict=[NSDictionary dictionaryWithContentsOfFile:userDefaultsValuesPath];
-        
-        // set them in the standard user defaults
         [[NSUserDefaults standardUserDefaults] registerDefaults:userDefaultsValuesDict];
-        
-        
         prefs = [NSUserDefaults standardUserDefaults];
+        
+        
         _lc = [prefs stringForKey:@"localColor"];
         _sc = [prefs stringForKey:@"secondTimeColor"];
         _tc = [prefs stringForKey:@"thirdTimeColor"];
         _fc = [prefs stringForKey:@"fourthTimeColor"];
-        /*
-        NSString *localColorData=[prefs stringForKey:@"localColor"];
-        if (localColorData == nil){
-            [prefs setObject:@"White" forKey:@"localColor"];
-            _localTimeColor = [prefs stringForKey:@"localColor"];
-        }
-        NSString *secondColorData=[prefs stringForKey:@"secondTimeColor"];
-        if (secondColorData == nil){
-            [prefs setObject:@"White" forKey:@"secondTimeColor"];
-            _TimeColor2 = [prefs stringForKey:@"secondTimeColor"];
-        }
-        NSString *thirdColorData=[prefs stringForKey:@"thirdTimeColor"];
-        if (thirdColorData == nil){
-            [prefs setObject:@"White" forKey:@"thirdTimeColor"];
-            _TimeColor3 = [prefs stringForKey:@"thirdTimeColor"];
-        }
-        NSString *fourthColorData=[prefs stringForKey:@"fourthTimeColor"];
-        if (fourthColorData == nil){
-            [prefs setObject:@"White" forKey:@"fourthTimeColor"];
-            _TimeColor4 = [prefs stringForKey:@"fourthTimeColor"];
-        }
-        [prefs synchronize];
-        */
+
     }
     return self;
 }
@@ -100,7 +73,6 @@
     }
     else return White;
 }
-
 -(NSColor *)TimeColor2 {
     NSString *colorData=[prefs stringForKey:@"secondTimeColor"];
     if ([colorData isEqualToString:@"White"]) {

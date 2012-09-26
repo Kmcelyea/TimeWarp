@@ -12,7 +12,7 @@
 {
     NSString *secondpadding;
     NSString *minutepadding;
-    NSTimer *counttime;
+
     NSDate *storedate;
     NSDate *correctDate;
     NSString *combostring;
@@ -36,7 +36,7 @@
 @property (nonatomic, weak)IBOutlet NSTextField *timersec;
 @property (nonatomic, weak)IBOutlet NSTextField *tilldate;
 @property (nonatomic, strong)NSString *correctDateString;
-
+@property (nonatomic)NSTimer *counttime;
 
 
 
