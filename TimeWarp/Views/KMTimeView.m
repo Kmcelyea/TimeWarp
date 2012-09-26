@@ -12,7 +12,7 @@
 #pragma mark Private Interface Declaractions
 @interface KMTimeView ()
 
-
+-(void)updateTimes:(NSTimer *)timer;
 
 @end
 
@@ -23,10 +23,33 @@
 @synthesize localcounter = _localcounter;
 
 
+
++ (KMTimeView *)instance {
+    static KMTimeView *_instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[KMTimeView alloc] init ];
+    });
+    
+    return _instance;
+}
+
 -(void)awakeFromNib{
     [self loadViewTimes];
-    
+    [_localTitle setTextColor:[[KMConfiguration instance]localTimeColor]];
+    [_secondTitle setTextColor:[[KMConfiguration instance]TimeColor2]];
+     [_thirdTitle setTextColor:[[KMConfiguration instance]TimeColor3]];
+     [_fourthTitle setTextColor:[[KMConfiguration instance]TimeColor4]];
+    [_LocalTime setTextColor:[[KMConfiguration instance]localTimeColor]];
+     [_SecondTime setTextColor:[[KMConfiguration instance]TimeColor2]];
+     [_ThirdTime setTextColor:[[KMConfiguration instance]TimeColor3]];
+     [_FourthTime setTextColor:[[KMConfiguration instance]TimeColor4]];
 }
+
+
+
+
+
 
 #pragma mark -
 #pragma mark Load View for Times
@@ -66,7 +89,7 @@
         [_thirdTitle setStringValue:@"Mountain"];
         [_fourthTitle setStringValue:@"Pacific"];
         
-        [NSTimer scheduledTimerWithTimeInterval:1.0
+       _localcounter = [NSTimer scheduledTimerWithTimeInterval:1.0
                                          target:self
                                        selector:@selector(updateTimes:)
                                        userInfo:nil
@@ -87,7 +110,7 @@
         [_thirdTitle setStringValue:@"Mountain"];
         [_fourthTitle setStringValue:@"Pacific"];
         
-        [NSTimer scheduledTimerWithTimeInterval:1.0
+       _localcounter = [NSTimer scheduledTimerWithTimeInterval:1.0
                                          target:self
                                        selector:@selector(updateTimes:)
                                        userInfo:nil
@@ -107,7 +130,7 @@
         [_thirdTitle setStringValue:@"East"];
         [_fourthTitle setStringValue:@"Pacific"];
         
-        [NSTimer scheduledTimerWithTimeInterval:1.0
+        _localcounter = [NSTimer scheduledTimerWithTimeInterval:1.0
                                          target:self
                                        selector:@selector(updateTimes:)
                                        userInfo:nil
@@ -127,7 +150,7 @@
         [_thirdTitle setStringValue:@"East"];
         [_fourthTitle setStringValue:@"Mountain"];
         
-        [NSTimer scheduledTimerWithTimeInterval:1.0
+        _localcounter = [NSTimer scheduledTimerWithTimeInterval:1.0
                                          target:self
                                        selector:@selector(updateTimes:)
                                        userInfo:nil
@@ -149,6 +172,16 @@
 #pragma mark -
 #pragma mark Update Times
 -(void)updateTimes:(NSTimer *)timer {
+    
+    
+        [_localTitle setTextColor:[[KMConfiguration instance]localTimeColor]];
+        [_secondTitle setTextColor:[[KMConfiguration instance]TimeColor2]];
+        [_thirdTitle setTextColor:[[KMConfiguration instance]TimeColor3]];
+        [_fourthTitle setTextColor:[[KMConfiguration instance]TimeColor4]];
+        [_LocalTime setTextColor:[[KMConfiguration instance]localTimeColor]];
+        [_SecondTime setTextColor:[[KMConfiguration instance]TimeColor2]];
+        [_ThirdTime setTextColor:[[KMConfiguration instance]TimeColor3]];
+        [_FourthTime setTextColor:[[KMConfiguration instance]TimeColor4]];
     
     if ([self currentSecond]<=10) {
         secondpadding = [NSString stringWithFormat:@"0%ld",[self currentSecond]];

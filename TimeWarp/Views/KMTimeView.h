@@ -13,23 +13,35 @@
     
     NSString *secondpadding;
     NSString *minutepadding;
+    IBOutlet NSWindow *timeviewwindow;
+
+
+
 }
+//Local Title and Time Text//
+@property(nonatomic)IBOutlet NSTextField * localTitle;
+@property(nonatomic)IBOutlet NSTextField * localTime;
+
+
 //Time Title//
-@property(nonatomic, weak)IBOutlet NSTextField * secondTitle;
-@property(nonatomic, weak)IBOutlet NSTextField * thirdTitle;
-@property(nonatomic, weak)IBOutlet NSTextField * fourthTitle;
+@property(nonatomic)IBOutlet NSTextField * secondTitle;
+@property(nonatomic)IBOutlet NSTextField * thirdTitle;
+@property(nonatomic)IBOutlet NSTextField * fourthTitle;
 
 
 //Time Text//
 
-@property(nonatomic , weak)IBOutlet NSTextField * LocalTime;
-@property(nonatomic , weak)IBOutlet NSTextField * SecondTime;
-@property(nonatomic , weak)IBOutlet NSTextField * ThirdTime;
-@property(nonatomic , weak)IBOutlet NSTextField * FourthTime;
+@property(nonatomic)IBOutlet NSTextField * LocalTime;
+@property(nonatomic)IBOutlet NSTextField * SecondTime;
+@property(nonatomic)IBOutlet NSTextField * ThirdTime;
+@property(nonatomic)IBOutlet NSTextField * FourthTime;
 
 
 
-@property(nonatomic , weak)NSTimer * localcounter;
+@property(nonatomic , strong)NSTimer * localcounter;
 
+
+
++ (KMTimeView *)instance;
 
 @end

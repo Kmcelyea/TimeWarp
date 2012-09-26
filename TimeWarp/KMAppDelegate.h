@@ -10,6 +10,13 @@
 #import "KMCountView.h"
 
 @interface KMAppDelegate : NSObject <NSApplicationDelegate>
+{
+    
+    
+    
+}
+
+@property (nonatomic)NSColor * localColor;
 
 
 @property (assign) IBOutlet NSWindow *window;
@@ -21,6 +28,7 @@
 
 -(IBAction)showSlide:(id)sender;
 
+-(NSColor *)localColor;
 
 
 

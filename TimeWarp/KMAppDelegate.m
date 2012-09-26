@@ -15,15 +15,8 @@
 #pragma mark -
 #pragma mark Implementation
 @implementation KMAppDelegate
+@synthesize localColor = _localColor;
 
-
-- (id)init {
-    self = [super init];
-    if (self) {
-
-    }
-    return self;
-}
 
 #pragma mark -
 #pragma mark Finished Launching
@@ -36,9 +29,8 @@
     [_slidewindow setOpaque:NO];
     [_window setLevel:NSNormalWindowLevel - 1];
     [_slidewindow setLevel:NSNormalWindowLevel - 1];
-   // [[[_drawer contentView]window]setAlphaValue:0.8];
-   // [[[_drawer contentView]window]setBackgroundColor:Transblack];
-    
+
+
 }
 
 #pragma mark -
@@ -68,6 +60,10 @@
 
 
 
+
+- (void)applicationWillTerminate:(NSNotification *)notification {
+    [[KMConfiguration instance]saveSettings];
+}
 
 
 @end
