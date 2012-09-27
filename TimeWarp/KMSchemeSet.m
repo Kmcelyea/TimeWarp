@@ -18,6 +18,7 @@
     [[KMConfiguration instance]setTc:@"White"];
     [[KMConfiguration instance]setFc:@"White"];
     [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
     [[KMConfiguration instance]saveSettings];
    
 
@@ -29,6 +30,7 @@
     [[KMConfiguration instance]setTc:@"Cyan"];
     [[KMConfiguration instance]setFc:@"Cyan"];
     [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
     [[KMConfiguration instance]saveSettings];
 }
 
@@ -38,6 +40,7 @@
     [[KMConfiguration instance]setTc:@"Green"];
     [[KMConfiguration instance]setFc:@"Green"];
     [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
     [[KMConfiguration instance]saveSettings];
 }
 -(IBAction)SetOrangeDreamsicle:(id)sender{
@@ -46,6 +49,7 @@
     [[KMConfiguration instance]setTc:@"Orange"];
     [[KMConfiguration instance]setFc:@"Orange"];
     [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
     [[KMConfiguration instance]saveSettings];
 }
 
@@ -55,6 +59,7 @@
     [[KMConfiguration instance]setTc:@"Magenta"];
     [[KMConfiguration instance]setFc:@"Magenta"];
     [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
     [[KMConfiguration instance]saveSettings];
     
     
@@ -66,6 +71,7 @@
     [[KMConfiguration instance]setTc:@"Banana"];
     [[KMConfiguration instance]setFc:@"Banana"];
     [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
     [[KMConfiguration instance]saveSettings];
     
     
@@ -77,12 +83,32 @@
     [[KMConfiguration instance]setTc:@"Cyan"];
     [[KMConfiguration instance]setFc:@"Orange"];
     [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
     [[KMConfiguration instance]saveSettings];
     
 }
 
+-(IBAction)SetRed:(id)sender {
+    [[KMConfiguration instance]setLc:@"Red"];
+    [[KMConfiguration instance]setSc:@"Red"];
+    [[KMConfiguration instance]setTc:@"Red"];
+    [[KMConfiguration instance]setFc:@"Red"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
+    [[KMConfiguration instance]saveSettings];
+    
+    
+}
 
-
+-(IBAction)SetBlack:(id)sender{
+    [[KMConfiguration instance]setLc:@"Black"];
+    [[KMConfiguration instance]setSc:@"Black"];
+    [[KMConfiguration instance]setTc:@"Black"];
+    [[KMConfiguration instance]setFc:@"Black"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
+    [[KMConfiguration instance]saveSettings];
+}
 
 -(IBAction)InvertBackground:(id)sender{
     NSString * currentset = [[KMConfiguration instance]bg];

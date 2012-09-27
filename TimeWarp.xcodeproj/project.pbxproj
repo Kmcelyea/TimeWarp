@@ -15,6 +15,7 @@
 		92995AB3160B61A4001D26D4 /* KMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92995AB2160B61A4001D26D4 /* KMAppDelegate.m */; };
 		92995AB6160B61A4001D26D4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92995AB4160B61A4001D26D4 /* MainMenu.xib */; };
 		92995AC2160B65AF001D26D4 /* KMTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92995AC1160B65AF001D26D4 /* KMTimeView.m */; };
+		929BE1A416149EF2005615E8 /* KMPositionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 929BE1A316149EF2005615E8 /* KMPositionSet.m */; };
 		92A1248C16123104005D8A37 /* KMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A1248B16123104005D8A37 /* KMConfiguration.m */; };
 		92A1249A16124BF0005D8A37 /* ColorScheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92A1249916124BF0005D8A37 /* ColorScheme.plist */; };
 		92C93BE7160CA691005CDD68 /* KMCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C93BE6160CA691005CDD68 /* KMCountView.m */; };
@@ -40,6 +41,8 @@
 		92995ABD160B63A3001D26D4 /* GlobalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalHeader.h; path = GlobalHeader/GlobalHeader.h; sourceTree = "<group>"; };
 		92995AC0160B65AF001D26D4 /* KMTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMTimeView.h; path = Views/KMTimeView.h; sourceTree = "<group>"; };
 		92995AC1160B65AF001D26D4 /* KMTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMTimeView.m; path = Views/KMTimeView.m; sourceTree = "<group>"; };
+		929BE1A216149EF2005615E8 /* KMPositionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMPositionSet.h; path = Classes/KMPositionSet.h; sourceTree = "<group>"; };
+		929BE1A316149EF2005615E8 /* KMPositionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMPositionSet.m; path = Classes/KMPositionSet.m; sourceTree = "<group>"; };
 		92A1248A16123104005D8A37 /* KMConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMConfiguration.h; sourceTree = "<group>"; };
 		92A1248B16123104005D8A37 /* KMConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMConfiguration.m; sourceTree = "<group>"; };
 		92A1249916124BF0005D8A37 /* ColorScheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ColorScheme.plist; sourceTree = "<group>"; };
@@ -100,11 +103,11 @@
 		92995AA5160B61A4001D26D4 /* TimeWarp */ = {
 			isa = PBXGroup;
 			children = (
+				92995ABC160B6367001D26D4 /* GlobalHeader */,
 				92A12488161230E5005D8A37 /* Configuration */,
 				92C93BE3160CA67D005CDD68 /* Views */,
 				92995ABF160B6551001D26D4 /* Classes */,
 				92995ABE160B6547001D26D4 /* ViewControllers */,
-				92995ABC160B6367001D26D4 /* GlobalHeader */,
 				92995AB1160B61A4001D26D4 /* KMAppDelegate.h */,
 				92995AB2160B61A4001D26D4 /* KMAppDelegate.m */,
 				92995AB4160B61A4001D26D4 /* MainMenu.xib */,
@@ -150,6 +153,8 @@
 			children = (
 				9274E54B16139B2400DBD863 /* KMSchemeSet.h */,
 				9274E54C16139B2400DBD863 /* KMSchemeSet.m */,
+				929BE1A216149EF2005615E8 /* KMPositionSet.h */,
+				929BE1A316149EF2005615E8 /* KMPositionSet.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				92C93BF1160CBF87005CDD68 /* KMCountDownViewController.m in Sources */,
 				92A1248C16123104005D8A37 /* KMConfiguration.m in Sources */,
 				9274E54D16139B2400DBD863 /* KMSchemeSet.m in Sources */,
+				929BE1A416149EF2005615E8 /* KMPositionSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

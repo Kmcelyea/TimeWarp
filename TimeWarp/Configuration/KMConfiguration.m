@@ -86,6 +86,16 @@
         return Banana;
         
     }
+    if ([localTimeData isEqualToString:@"Red"])
+    {
+        return Red;
+        
+    }
+    if ([localTimeData isEqualToString:@"Black"])
+    {
+        return Black;
+        
+    }
     else return White;
 }
 -(NSColor *)TimeColor2 {
@@ -119,6 +129,16 @@
         return Banana;
         
     }
+    if ([colorData isEqualToString:@"Red"])
+    {
+        return Red;
+        
+    }
+    if ([colorData isEqualToString:@"Black"])
+    {
+        return Black;
+        
+    }
     else return Cyan;
 }
 -(NSColor *)TimeColor3 {
@@ -150,6 +170,16 @@
     if ([colorData isEqualToString:@"Banana"])
     {
         return Banana;
+        
+    }
+    if ([colorData isEqualToString:@"Red"])
+    {
+        return Red;
+        
+    }
+    if ([colorData isEqualToString:@"Black"])
+    {
+        return Black;
         
     }
     else return Cyan;
@@ -186,14 +216,22 @@
         return Banana;
         
     }
+    if ([colorData isEqualToString:@"Red"])
+    {
+        return Red;
+        
+    }
+    if ([colorData isEqualToString:@"Black"])
+    {
+        return Black;
+        
+    }
     else return Cyan;
 }
 
 -(NSColor *)BgColor {
     NSString *colorData=[prefs stringForKey:@"bgColor"];
-    NSLog(@"Color data = %@",colorData);
     _bg = [prefs stringForKey:@"bgColor"];
-            NSLog(@"_BG = %@",_bg);
     if ([colorData isEqualToString:@"White"]) {
         return Transwhite;
     }
@@ -234,6 +272,9 @@
     [prefs removeObjectForKey:@"changeflag"];
     [prefs setObject:_colorChange forKey:@"changeflag"];
     
+    [prefs removeObjectForKey:@"changeflagslide"];
+    [prefs setObject:_colorChangeSlide forKey:@"changeflagslide"];
+    
     [prefs removeObjectForKey:@"bgColor"];
     [prefs setObject:_bg forKey:@"bgColor"];
     
@@ -241,5 +282,59 @@
     
 }
 
+
+
+#pragma mark -
+#pragma mark Position Methods
+
+-(NSRect)positionRect {
+    NSString *positiondata = [prefs stringForKey:@"position"];
+    if([positiondata isEqualToString:@"BottomLeft"]){
+        return BottomLeft;
+        
+    }
+    if([positiondata isEqualToString:@"BottomRight"]){
+        return BottomRight;
+        
+    }
+    if([positiondata isEqualToString:@"TopLeft"]){
+        return TopLeft;
+        
+    }
+    if([positiondata isEqualToString:@"TopRight"]){
+        return TopRight;
+        
+    }
+    else return BottomLeft;
+}
+
+-(NSRect)positionRectSlide {
+    NSString *positiondata = [prefs stringForKey:@"position"];
+    if([positiondata isEqualToString:@"BottomLeft"]){
+        return BottomLeftSlide;
+        
+    }
+    if([positiondata isEqualToString:@"BottomRight"]){
+        return BottomRightSlide;
+        
+    }
+    if([positiondata isEqualToString:@"TopLeft"]){
+        return TopLeftSlide;
+        
+    }
+    if([positiondata isEqualToString:@"TopRight"]){
+        return TopRightSlide;
+        
+    }
+    else return BottomLeftSlide;
+}
+
+-(void)savePosition {
+    prefs = [NSUserDefaults standardUserDefaults];
+    [prefs removeObjectForKey:@"position"];
+    [prefs setObject:_position forKey:@"position"];
+    
+    [prefs synchronize];
+}
 
 @end

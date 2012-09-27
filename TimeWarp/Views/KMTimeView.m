@@ -8,6 +8,7 @@
 
 #import "KMTimeView.h"
 
+
 #pragma mark -
 #pragma mark Private Interface Declaractions
 @interface KMTimeView ()
@@ -308,7 +309,5 @@
     
     
 }
-
-
 
 @end

@@ -17,10 +17,25 @@
 #pragma mark -
 #pragma mark Outlet Colors
 #define White [NSColor colorWithCalibratedRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0]
+#define Black [NSColor colorWithCalibratedRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1.0]
 #define Cyan [NSColor colorWithCalibratedRed:102/255.0 green:255/255.0 blue:204/255.0 alpha:1.0]
 #define Orange [NSColor colorWithCalibratedRed:255/255.0 green:204/255.0 blue:102/255.0 alpha:1.0]
 #define Green [NSColor colorWithCalibratedRed:0/255.0 green:255/255.0 blue:0/255.0 alpha:1.0]
 #define Magenta [NSColor colorWithCalibratedRed:255/255.0 green:0/255.0 blue:255/255.0 alpha:1.0]
 #define Banana [NSColor colorWithCalibratedRed:255/255.0 green:255/255.0 blue:102/255.0 alpha:1.0]
+#define Red [NSColor colorWithCalibratedRed:255/255.0 green:0/255.0 blue:0/255.0 alpha:1.0]
 
+
+#pragma mark -
+#pragma mark Rects
+
+#define BottomLeft NSMakeRect(0, 0, 326, 217)
+#define BottomLeftSlide NSMakeRect(326, 0, 390, 217)
+#define TopLeft NSMakeRect(0, 661, 326, 217)
+#define TopLeftSlide NSMakeRect(326, 661, 390, 217)
+
+#define BottomRight NSMakeRect(1114, 0, 326, 217)
+#define BottomRightSlide NSMakeRect(724, 0, 390, 217)
+#define TopRight NSMakeRect(1114, 661, 326, 217)
+#define TopRightSlide NSMakeRect(724, 661, 390, 217)
 #endif

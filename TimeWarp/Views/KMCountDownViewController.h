@@ -25,6 +25,8 @@
     NSString * counterHoursPadding;
     
     
+    
+    
 }
 
 
@@ -42,7 +44,10 @@
 
 
 
+
+
 -(IBAction)doCountDown:(id)sender;
 -(IBAction)clearCount:(id)sender;
+
 
 @end

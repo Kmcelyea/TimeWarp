@@ -23,6 +23,10 @@
 #pragma mark Awake from Nib
 @implementation KMCountDownViewController
 
+
+
+
+
 - (void)awakeFromNib{
     [_datepicker setDateValue:[NSDate date]];
     [_datepicker setMinDate:[NSDate date]];
@@ -31,7 +35,15 @@
     [_datepicker setTimeZone:[calendar timeZone]];
     [_datepicker setLocale:locale];
     [_datepicker setCalendar:calendar];
-
+    
+    [_timerday setTextColor:[[KMConfiguration instance]TimeColor3]];
+    [_timerhour setTextColor:[[KMConfiguration instance]TimeColor2]];
+    [_timermin setTextColor:[[KMConfiguration instance]TimeColor2]];
+    [_timersec setTextColor:[[KMConfiguration instance]TimeColor3]];
+    [_tilldate setTextColor:[[KMConfiguration instance]TimeColor3]];
+    [_timerlabel setTextColor:[[KMConfiguration instance]TimeColor4]];
+    [_datepicker setTextColor:[[KMConfiguration instance]TimeColor3]];
+    
 }
 #pragma mark -
 #pragma mark DoCountDown issued on start segment
@@ -112,13 +124,27 @@
             displayDate = [combostring stringByReplacingOccurrencesOfString:@"-0700" withString:@""];
         }
         
-    
+       
         
         [_tilldate setStringValue:displayDate];
 
         //[_datepicker setDateValue:[_datepicker dateValue]];
     storedate = [NSDate dateWithString:combostring];
     }
+
+    if ([[[KMConfiguration instance]colorChangeSlide] isEqualToString:@"1"]){
+        [_timerday setTextColor:[[KMConfiguration instance]TimeColor3]];
+        [_timerhour setTextColor:[[KMConfiguration instance]TimeColor2]];
+        [_timermin setTextColor:[[KMConfiguration instance]TimeColor2]];
+        [_timersec setTextColor:[[KMConfiguration instance]TimeColor3]];
+        [_tilldate setTextColor:[[KMConfiguration instance]TimeColor3]];
+        [_timerlabel setTextColor:[[KMConfiguration instance]TimeColor4]];
+        [_datepicker setTextColor:[[KMConfiguration instance]TimeColor3]];
+        [[KMConfiguration instance]setColorChangeSlide:@"0"];
+        [[KMConfiguration instance]saveSettings];
+    }
+    
+    
     
     NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
     [DateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss ZZZ"];
@@ -144,7 +170,6 @@
     NSInteger sec = [seccomponent second];
 #pragma mark -
 #pragma mark if > or < for days , min , secs
-#warning Should probably add an IF for hours.
     if (sec<=10) {
         secondpadding = [NSString stringWithFormat:@"0%ld",sec];
     }
@@ -299,8 +324,3 @@
 
 @end
 
-
-
-//Old code
-//NSString *secondsSub = [secondpadding substringFromIndex:[secondpadding length]-2];
-//NSString *minsSub = [minutepadding substringFromIndex:[minutepadding length]-2];

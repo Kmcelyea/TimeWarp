@@ -18,6 +18,9 @@
 -(IBAction)SetMagenta:(id)sender;
 -(IBAction)SetBanana:(id)sender;
 -(IBAction)SetMulti:(id)sender;
+-(IBAction)SetRed:(id)sender;
+-(IBAction)SetBlack:(id)sender;
+
 
 -(IBAction)InvertBackground:(id)sender;
 @end

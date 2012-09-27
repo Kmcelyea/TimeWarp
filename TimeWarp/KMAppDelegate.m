@@ -29,6 +29,8 @@
     [_slidewindow setOpaque:NO];
     [_window setLevel:NSNormalWindowLevel - 1];
     [_slidewindow setLevel:NSNormalWindowLevel - 1];
+    [_window setFrame:[[KMConfiguration instance]positionRect] display:YES];
+    [_slidewindow setFrame:[[KMConfiguration instance]positionRectSlide] display:YES];
 
 
 }
@@ -63,6 +65,7 @@
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
     [[KMConfiguration instance]saveSettings];
+    [[KMConfiguration instance]savePosition];
 }
 
 

@@ -29,8 +29,25 @@
 @property(nonatomic, strong)NSColor *BgColor;
 
 @property(nonatomic, strong)NSString *colorChange;
+@property(nonatomic, strong)NSString *colorChangeSlide;
+
+
+//Position Config
+@property (nonatomic, strong)NSString * position;
+//@property(nonatomic, strong)NSString * Bottomleft;
+//@property(nonatomic, strong)NSString * Bottomright;
+//@property(nonatomic, strong)NSString * Topleft;
+//@property(nonatomic, strong)NSString * Topright;
+
+@property(nonatomic)NSRect positionRect;
+@property(nonatomic)NSRect positionRectSlide;
+//@property(nonatomic, strong)NSRect * RectBottomleft;
+//@property(nonatomic, strong)NSRect * RectBottomright;
+//@property(nonatomic, strong)NSRect * RectTopleft;
+//@property(nonatomic, strong)NSRect * RectTopright;
 
 + (KMConfiguration *)instance;
 
 -(void) saveSettings;
+-(void) savePosition;
 @end
