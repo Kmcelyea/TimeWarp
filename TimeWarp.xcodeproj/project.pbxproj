@@ -21,6 +21,8 @@
 		92A1249A16124BF0005D8A37 /* ColorScheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92A1249916124BF0005D8A37 /* ColorScheme.plist */; };
 		92C93BE7160CA691005CDD68 /* KMCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C93BE6160CA691005CDD68 /* KMCountView.m */; };
 		92C93BF1160CBF87005CDD68 /* KMCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C93BF0160CBF87005CDD68 /* KMCountDownViewController.m */; };
+		92E1F19C1615006C00EE38A5 /* myIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 92E1F19B1615006C00EE38A5 /* myIcon.icns */; };
+		92E1F19E1615015600EE38A5 /* construct.icns in Resources */ = {isa = PBXBuildFile; fileRef = 92E1F19D1615015600EE38A5 /* construct.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		92C93BE6160CA691005CDD68 /* KMCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMCountView.m; path = Views/KMCountView.m; sourceTree = "<group>"; };
 		92C93BEF160CBF87005CDD68 /* KMCountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMCountDownViewController.h; path = Views/KMCountDownViewController.h; sourceTree = "<group>"; };
 		92C93BF0160CBF87005CDD68 /* KMCountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMCountDownViewController.m; path = Views/KMCountDownViewController.m; sourceTree = "<group>"; };
+		92E1F19B1615006C00EE38A5 /* myIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = myIcon.icns; sourceTree = "<group>"; };
+		92E1F19D1615015600EE38A5 /* construct.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = construct.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 		92995A90160B61A4001D26D4 = {
 			isa = PBXGroup;
 			children = (
+				92E1F19D1615015600EE38A5 /* construct.icns */,
+				92E1F19B1615006C00EE38A5 /* myIcon.icns */,
 				92995AA5160B61A4001D26D4 /* TimeWarp */,
 				92995A9E160B61A4001D26D4 /* Frameworks */,
 				92995A9C160B61A4001D26D4 /* Products */,
@@ -238,6 +244,8 @@
 				92995AB0160B61A4001D26D4 /* Credits.rtf in Resources */,
 				92995AB6160B61A4001D26D4 /* MainMenu.xib in Resources */,
 				92A1249A16124BF0005D8A37 /* ColorScheme.plist in Resources */,
+				92E1F19C1615006C00EE38A5 /* myIcon.icns in Resources */,
+				92E1F19E1615015600EE38A5 /* construct.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
