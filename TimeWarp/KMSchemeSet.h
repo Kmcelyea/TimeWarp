@@ -15,5 +15,9 @@
 -(IBAction)SetSkyMix:(id)sender;
 -(IBAction)SetGreenMeadow:(id)sender;
 -(IBAction)SetOrangeDreamsicle:(id)sender;
+-(IBAction)SetMagenta:(id)sender;
+-(IBAction)SetBanana:(id)sender;
+-(IBAction)SetMulti:(id)sender;
 
+-(IBAction)InvertBackground:(id)sender;
 @end

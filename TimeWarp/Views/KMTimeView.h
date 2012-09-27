@@ -37,6 +37,9 @@
 @property(nonatomic)IBOutlet NSTextField * FourthTime;
 
 
+@property(nonatomic)IBOutlet NSTextField * ShowHide;
+
+
 @property(nonatomic , strong)NSTimer * localcounter;
 
 

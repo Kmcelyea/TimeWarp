@@ -23,9 +23,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 
-    [_window setBackgroundColor:Transblack];
+    [_window setBackgroundColor:[[KMConfiguration instance]BgColor]];
     [_window setOpaque:NO];
-    [_slidewindow setBackgroundColor:Transblack];
+    [_slidewindow setBackgroundColor:[[KMConfiguration instance]BgColor]];
     [_slidewindow setOpaque:NO];
     [_window setLevel:NSNormalWindowLevel - 1];
     [_slidewindow setLevel:NSNormalWindowLevel - 1];

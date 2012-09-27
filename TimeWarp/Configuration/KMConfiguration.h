@@ -19,11 +19,14 @@
 @property(nonatomic, strong)NSString * sc;
 @property(nonatomic, strong)NSString * tc;
 @property(nonatomic, strong)NSString * fc;
+@property(nonatomic, strong)NSString * bg;
 
 @property(nonatomic, strong)NSColor *localTimeColor;
 @property(nonatomic, strong)NSColor *TimeColor2;
 @property(nonatomic, strong)NSColor *TimeColor3;
 @property(nonatomic, strong)NSColor *TimeColor4;
+
+@property(nonatomic, strong)NSColor *BgColor;
 
 @property(nonatomic, strong)NSString *colorChange;
 

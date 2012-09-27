@@ -48,4 +48,54 @@
     [[KMConfiguration instance]setColorChange:@"1"];
     [[KMConfiguration instance]saveSettings];
 }
+
+-(IBAction)SetMagenta:(id)sender {
+    [[KMConfiguration instance]setLc:@"Magenta"];
+    [[KMConfiguration instance]setSc:@"Magenta"];
+    [[KMConfiguration instance]setTc:@"Magenta"];
+    [[KMConfiguration instance]setFc:@"Magenta"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]saveSettings];
+    
+    
+}
+
+-(IBAction)SetBanana:(id)sender {
+    [[KMConfiguration instance]setLc:@"Banana"];
+    [[KMConfiguration instance]setSc:@"Banana"];
+    [[KMConfiguration instance]setTc:@"Banana"];
+    [[KMConfiguration instance]setFc:@"Banana"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]saveSettings];
+    
+    
+}
+
+-(IBAction)SetMulti:(id)sender {
+    [[KMConfiguration instance]setLc:@"Green"];
+    [[KMConfiguration instance]setSc:@"Magenta"];
+    [[KMConfiguration instance]setTc:@"Cyan"];
+    [[KMConfiguration instance]setFc:@"Orange"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]saveSettings];
+    
+}
+
+
+
+
+-(IBAction)InvertBackground:(id)sender{
+    NSString * currentset = [[KMConfiguration instance]bg];
+    if ([currentset isEqualToString:@"Black"]) {
+        [[KMConfiguration instance]setBg:@"White"];
+            [[KMConfiguration instance]saveSettings];
+    }
+    else if ([currentset isEqualToString:@"White"]) {
+        [[KMConfiguration instance]setBg:@"Black"];
+            [[KMConfiguration instance]saveSettings];
+            
+    }
+
+}
+
 @end

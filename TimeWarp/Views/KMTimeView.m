@@ -35,7 +35,7 @@
      [_SecondTime setTextColor:[[KMConfiguration instance]TimeColor2]];
      [_ThirdTime setTextColor:[[KMConfiguration instance]TimeColor3]];
      [_FourthTime setTextColor:[[KMConfiguration instance]TimeColor4]];
-
+    [_ShowHide setTextColor:[[KMConfiguration instance]TimeColor2]];
 }
 
 
@@ -175,6 +175,7 @@
         [_SecondTime setTextColor:[[KMConfiguration instance]TimeColor2]];
         [_ThirdTime setTextColor:[[KMConfiguration instance]TimeColor3]];
         [_FourthTime setTextColor:[[KMConfiguration instance]TimeColor4]];
+        [_ShowHide setTextColor:[[KMConfiguration instance]TimeColor2]];
         [[KMConfiguration instance]setColorChange:@"0"];
         [[KMConfiguration instance]saveSettings];
     }

@@ -14,10 +14,12 @@
 @synthesize TimeColor2 = _TimeColor2;
 @synthesize TimeColor3 = _TimeColor3;
 @synthesize TimeColor4 = _TimeColor4;
+@synthesize BgColor = _BgColor;
 @synthesize lc = _lc;
 @synthesize sc = _sc;
 @synthesize tc = _tc;
 @synthesize fc = _fc;
+@synthesize bg = _bg;
 @synthesize colorChange = _colorChange;
 
 -(id) init{
@@ -35,7 +37,8 @@
         _sc = [prefs stringForKey:@"secondTimeColor"];
         _tc = [prefs stringForKey:@"thirdTimeColor"];
         _fc = [prefs stringForKey:@"fourthTimeColor"];
-        
+
+
 
     }
     return self;
@@ -73,6 +76,16 @@
         return Orange;
         
     }
+    if ([localTimeData isEqualToString:@"Magenta"])
+    {
+        return Magenta;
+        
+    }
+    if ([localTimeData isEqualToString:@"Banana"])
+    {
+        return Banana;
+        
+    }
     else return White;
 }
 -(NSColor *)TimeColor2 {
@@ -96,6 +109,16 @@
         return Orange;
         
     }
+    if ([colorData isEqualToString:@"Magenta"])
+    {
+        return Magenta;
+        
+    }
+    if ([colorData isEqualToString:@"Banana"])
+    {
+        return Banana;
+        
+    }
     else return Cyan;
 }
 -(NSColor *)TimeColor3 {
@@ -117,6 +140,16 @@
     if ([colorData isEqualToString:@"Orange"])
     {
         return Orange;
+        
+    }
+    if ([colorData isEqualToString:@"Magenta"])
+    {
+        return Magenta;
+        
+    }
+    if ([colorData isEqualToString:@"Banana"])
+    {
+        return Banana;
         
     }
     else return Cyan;
@@ -143,8 +176,33 @@
         return Orange;
         
     }
+    if ([colorData isEqualToString:@"Magenta"])
+    {
+        return Magenta;
+        
+    }
+    if ([colorData isEqualToString:@"Banana"])
+    {
+        return Banana;
+        
+    }
     else return Cyan;
 }
+
+-(NSColor *)BgColor {
+    NSString *colorData=[prefs stringForKey:@"bgColor"];
+    NSLog(@"Color data = %@",colorData);
+    _bg = [prefs stringForKey:@"bgColor"];
+            NSLog(@"_BG = %@",_bg);
+    if ([colorData isEqualToString:@"White"]) {
+        return Transwhite;
+    }
+    if ([colorData isEqualToString:@"Black"]) {
+        return Transblack;
+    }
+    else return Transblack;
+}
+
 -(NSString *)colorChange{
     NSString * flag = [prefs stringForKey:@"changeflag"];
     _colorChange = flag;
@@ -175,6 +233,9 @@
 
     [prefs removeObjectForKey:@"changeflag"];
     [prefs setObject:_colorChange forKey:@"changeflag"];
+    
+    [prefs removeObjectForKey:@"bgColor"];
+    [prefs setObject:_bg forKey:@"bgColor"];
     
     [prefs synchronize];
     
