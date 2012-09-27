@@ -24,15 +24,6 @@
 
 
 
-+ (KMTimeView *)instance {
-    static KMTimeView *_instance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _instance = [[KMTimeView alloc] init ];
-    });
-    
-    return _instance;
-}
 
 -(void)awakeFromNib{
     [self loadViewTimes];

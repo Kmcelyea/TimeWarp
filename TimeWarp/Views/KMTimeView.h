@@ -41,6 +41,4 @@
 
 
 
-+ (KMTimeView *)instance;
-
 @end
