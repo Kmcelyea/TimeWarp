@@ -44,6 +44,7 @@
      [_SecondTime setTextColor:[[KMConfiguration instance]TimeColor2]];
      [_ThirdTime setTextColor:[[KMConfiguration instance]TimeColor3]];
      [_FourthTime setTextColor:[[KMConfiguration instance]TimeColor4]];
+
 }
 
 
@@ -174,6 +175,7 @@
 -(void)updateTimes:(NSTimer *)timer {
     
     
+    if ([[[KMConfiguration instance]colorChange] isEqualToString:@"1"]) {
         [_localTitle setTextColor:[[KMConfiguration instance]localTimeColor]];
         [_secondTitle setTextColor:[[KMConfiguration instance]TimeColor2]];
         [_thirdTitle setTextColor:[[KMConfiguration instance]TimeColor3]];
@@ -182,6 +184,10 @@
         [_SecondTime setTextColor:[[KMConfiguration instance]TimeColor2]];
         [_ThirdTime setTextColor:[[KMConfiguration instance]TimeColor3]];
         [_FourthTime setTextColor:[[KMConfiguration instance]TimeColor4]];
+        [[KMConfiguration instance]setColorChange:@"0"];
+        [[KMConfiguration instance]saveSettings];
+    }
+    
     
     if ([self currentSecond]<=10) {
         secondpadding = [NSString stringWithFormat:@"0%ld",[self currentSecond]];

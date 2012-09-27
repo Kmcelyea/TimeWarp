@@ -18,6 +18,7 @@
 @synthesize sc = _sc;
 @synthesize tc = _tc;
 @synthesize fc = _fc;
+@synthesize colorChange = _colorChange;
 
 -(id) init{
     self = [super init];
@@ -34,6 +35,7 @@
         _sc = [prefs stringForKey:@"secondTimeColor"];
         _tc = [prefs stringForKey:@"thirdTimeColor"];
         _fc = [prefs stringForKey:@"fourthTimeColor"];
+        
 
     }
     return self;
@@ -143,7 +145,11 @@
     }
     else return Cyan;
 }
-
+-(NSString *)colorChange{
+    NSString * flag = [prefs stringForKey:@"changeflag"];
+    _colorChange = flag;
+    return flag;
+}
 
 #pragma mark -
 #pragma mark Save Methods
@@ -167,6 +173,8 @@
     [prefs removeObjectForKey:@"fourthTimeColor"];
     [prefs setObject:_fc forKey:@"fourthTimeColor"];
 
+    [prefs removeObjectForKey:@"changeflag"];
+    [prefs setObject:_colorChange forKey:@"changeflag"];
     
     [prefs synchronize];
     

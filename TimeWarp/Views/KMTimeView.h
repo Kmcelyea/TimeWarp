@@ -13,7 +13,7 @@
     
     NSString *secondpadding;
     NSString *minutepadding;
-    IBOutlet NSWindow *timeviewwindow;
+    
 
 
 
@@ -35,7 +35,6 @@
 @property(nonatomic)IBOutlet NSTextField * SecondTime;
 @property(nonatomic)IBOutlet NSTextField * ThirdTime;
 @property(nonatomic)IBOutlet NSTextField * FourthTime;
-
 
 
 @property(nonatomic , strong)NSTimer * localcounter;

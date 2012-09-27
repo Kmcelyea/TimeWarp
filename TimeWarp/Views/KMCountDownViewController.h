@@ -23,6 +23,8 @@
     NSString * counterSecondsPadding;
     NSString * counterMinutesPadding;
     NSString * counterHoursPadding;
+    
+    
 }
 
 

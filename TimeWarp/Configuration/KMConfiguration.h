@@ -25,6 +25,8 @@
 @property(nonatomic, strong)NSColor *TimeColor3;
 @property(nonatomic, strong)NSColor *TimeColor4;
 
+@property(nonatomic, strong)NSString *colorChange;
+
 + (KMConfiguration *)instance;
 
 -(void) saveSettings;
