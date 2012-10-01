@@ -21,6 +21,7 @@
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSWindow *slidewindow;
+@property (assign) IBOutlet NSWindow *clockwindow;
 @property (assign) IBOutlet KMCountView *slideview;
 @property (nonatomic, weak)IBOutlet NSSegmentedControl *showsegment;
 

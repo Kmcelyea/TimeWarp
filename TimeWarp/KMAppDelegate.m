@@ -31,6 +31,17 @@
     [_slidewindow setLevel:NSNormalWindowLevel - 1];
     [_window setFrame:[[KMConfiguration instance]positionRect] display:YES];
     [_slidewindow setFrame:[[KMConfiguration instance]positionRectSlide] display:YES];
+    [_window setStyleMask:NSBorderlessWindowMask];
+    [_slidewindow setStyleMask:NSBorderlessWindowMask];
+    
+    NSScreen * screen = [NSScreen mainScreen];
+    NSRect screenRect = [screen frame];
+    [_clockwindow setFrame:screenRect display:YES];
+    [_clockwindow setStyleMask:NSBorderlessWindowMask];
+    [_clockwindow setOpaque:YES];
+    [_clockwindow setBackgroundColor:[[KMConfiguration instance]BgColor]];
+    [_clockwindow setLevel:CGShieldingWindowLevel()];
+    
 
 
 }
