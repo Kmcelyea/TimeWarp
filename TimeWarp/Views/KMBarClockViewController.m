@@ -32,11 +32,15 @@
     [_hourindicator setDoubleValue:progress];
     [_minindicator setDoubleValue:progressmin];
     [_secindicator setDoubleValue:progressSec];
+    
     [_hour setStringValue:[NSString stringWithFormat:@"%.f",progress]];
     [_min setStringValue:[NSString stringWithFormat:@"%.f",progressmin]];
     [_sec setStringValue:[NSString stringWithFormat:@"%.f",progressSec]];
 
 
+     [_hour setTextColor:[[KMConfiguration instance]localTimeColor]];
+    [_min setTextColor:[[KMConfiguration instance]localTimeColor]];
+    [_sec setTextColor:[[KMConfiguration instance]TimeColor2]];
     _holdHour = progress;
     _holdMin = progressmin;
     _holdSec = progressSec;
@@ -55,7 +59,9 @@
 
 
 -(void)updateProgress:(NSTimer *)timer {
-    
+    [_hour setTextColor:[[KMConfiguration instance]localTimeColor]];
+    [_min setTextColor:[[KMConfiguration instance]localTimeColor]];
+    [_sec setTextColor:[[KMConfiguration instance]TimeColor2]];
     
     double progress = [[KMClock instance]currentprogresshour];
     if (_holdHour != progress) {
