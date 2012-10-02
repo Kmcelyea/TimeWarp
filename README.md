@@ -21,3 +21,7 @@ Transparent Black backgrounded window with no bars. Uses my global header file t
 ![TimeWarp Slide](https://raw.github.com/Kmcelyea/Mactopia/master/TimeWarpScreens/Countdownslide.png)
 
 ![TimeWarp ConversionChart](https://raw.github.com/Kmcelyea/Mactopia/master/TimeWarpScreens/conversionchart.png)
+
+![TimeWarp BarClock](https://raw.github.com/Kmcelyea/Mactopia/master/TimeWarpScreens/BarClock.png)
+
+![TimeWarp ProgressBar](https://raw.github.com/Kmcelyea/Mactopia/master/TimeWarpScreens/DailyProgress.png)
