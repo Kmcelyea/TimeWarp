@@ -10,6 +10,10 @@
 
 @interface KMPositionSet : NSObject
 
+@property(assign)IBOutlet NSWindow *window;
+@property(assign)IBOutlet NSWindow *windowslide;
+@property(assign)IBOutlet NSWindow *windowticker;
+
 -(IBAction)SetBottomLeft:(id)sender;
 -(IBAction)SetBottomRight:(id)sender;
 -(IBAction)SetTopLeft:(id)sender;

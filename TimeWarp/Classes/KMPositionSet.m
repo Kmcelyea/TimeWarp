@@ -11,38 +11,44 @@
 @implementation KMPositionSet
 
 
--(IBAction)SetBottomLeft:(id)sender{
+-(IBAction)SetBottomLeft:(id)sender
+{
     
     [[KMConfiguration instance]setPosition:@"BottomLeft"];
     [[KMConfiguration instance]savePosition];
-    NSAlert * non = [NSAlert alertWithMessageText:@"Change will take effect on next launch" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
-    [non runModal];
-
+    [_window setFrame:[[KMConfiguration instance]positionRect] display:YES];
+    [_windowslide setFrame:[[KMConfiguration instance]positionRectSlide] display:YES];
+    [_windowticker setFrame:[[KMConfiguration instance]positionRectTicker] display:YES];
 }
 
--(IBAction)SetBottomRight:(id)sender{
+-(IBAction)SetBottomRight:(id)sender
+{
     [[KMConfiguration instance]setPosition:@"BottomRight"];
     [[KMConfiguration instance]savePosition];
-    NSAlert * non = [NSAlert alertWithMessageText:@"Change will take effect on next launch" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
-    [non runModal];
-
-}
-
--(IBAction)SetTopLeft:(id)sender{
-    [[KMConfiguration instance]setPosition:@"TopLeft"];
-    [[KMConfiguration instance]savePosition];
-    NSAlert * non = [NSAlert alertWithMessageText:@"Change will take effect on next launch" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
-    [non runModal];
-
+    [_window setFrame:[[KMConfiguration instance]positionRect] display:YES];
+    [_windowslide setFrame:[[KMConfiguration instance]positionRectSlide] display:YES];
+    [_windowticker setFrame:[[KMConfiguration instance]positionRectTicker] display:YES];
     
 }
 
--(IBAction)SetTopRight:(id)sender{
+-(IBAction)SetTopLeft:(id)sender
+{
+    [[KMConfiguration instance]setPosition:@"TopLeft"];
+    [[KMConfiguration instance]savePosition];
+    [_window setFrame:[[KMConfiguration instance]positionRect] display:YES];
+    [_windowslide setFrame:[[KMConfiguration instance]positionRectSlide] display:YES];
+    [_windowticker setFrame:[[KMConfiguration instance]positionRectTicker] display:YES];
+    
+}
+
+-(IBAction)SetTopRight:(id)sender
+{
     [[KMConfiguration instance]setPosition:@"TopRight"];
     [[KMConfiguration instance]savePosition];
-    NSAlert * non = [NSAlert alertWithMessageText:@"Change will take effect on next launch" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
-    [non runModal];
-
+    [_window setFrame:[[KMConfiguration instance]positionRect] display:YES];
+    [_windowslide setFrame:[[KMConfiguration instance]positionRectSlide] display:YES];
+    [_windowticker setFrame:[[KMConfiguration instance]positionRectTicker] display:YES];
+    
 }
 
 
