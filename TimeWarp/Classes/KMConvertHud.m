@@ -15,6 +15,7 @@
     [_converthud setOpaque:NO];
     [_converthud setBackgroundColor:Transblack];
     [_converthud makeKeyAndOrderFront:self];
+    [_converthud setMovableByWindowBackground:YES];
     
 }
 
