@@ -29,6 +29,8 @@
 
      double progress = [[KMClock instance]currentprogresshour];
     [_ticker setDoubleValue:progress];
+    [_amount setTextColor:[[KMConfiguration instance]localTimeColor]];
+    [_titleamount setTextColor:[[KMConfiguration instance]localTimeColor]];
     [_amount setStringValue:[NSString stringWithFormat:@"%.f/24",progress]];
     _holdprogress = progress;
     _tickerTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
@@ -44,12 +46,14 @@
 
 
 -(void)updateProgress:(NSTimer *)timer {
-    
+    [_amount setTextColor:[[KMConfiguration instance]localTimeColor]];
+    [_titleamount setTextColor:[[KMConfiguration instance]localTimeColor]];
+
 
     double progress = [[KMClock instance]currentprogresshour];
     
     if (_holdprogress != progress) {
-        [_ticker setDoubleValue:progress];
+                [_ticker setDoubleValue:progress];
         [_amount setStringValue:[NSString stringWithFormat:@"%.f/24",progress]];
         NSLog(@"different progress updating");
         _holdprogress = progress;

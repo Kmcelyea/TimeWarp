@@ -10,10 +10,11 @@
 
 @interface KMTickerViewController : NSViewController
 
-@property (nonatomic)NSTimer *tickerTimer;
+@property(nonatomic)NSTimer *tickerTimer;
 @property(nonatomic, assign)IBOutlet NSLevelIndicator *ticker;
 @property(nonatomic, assign)double holdprogress;
 @property(nonatomic, assign)IBOutlet NSTextField *amount;
+@property(nonatomic, assign)IBOutlet NSTextField *titleamount;
 
 -(void)updateProgress:(NSTimer *)timer;
 
