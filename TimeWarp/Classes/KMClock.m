@@ -204,7 +204,7 @@
     NSDateComponents * components = [calendar components:NSHourCalendarUnit fromDate:now];
     
     
-    NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+1];
+    NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-2];
     if ([components hour]-2 > 12) {
         if ([components hour]-2 == 12) {
             return @"12 PM";
@@ -259,7 +259,7 @@
     NSDateComponents * components = [calendar components:NSHourCalendarUnit fromDate:now];
     
     
-    NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+1];
+    NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-1];
     if ([components hour]-1 > 12) {
         if ([components hour]-1 == 12) {
             return @"12 PM";
@@ -303,6 +303,7 @@
         else return @"UNDEFINED";
     }
     return componenthour;
+
 }
 
 
@@ -329,6 +330,19 @@
     
     return [localTZ abbreviation];
     
+    
+}
+
+
+-(double)currentprogresshour {
+    
+    NSDate *now = [NSDate date];
+    
+    NSCalendar *calendar = [[NSCalendar alloc]
+                            initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents * components = [calendar components:NSHourCalendarUnit fromDate:now];
+    
+    return [components hour];
     
 }
 

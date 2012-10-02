@@ -62,11 +62,12 @@
     _clockLabel = [[KMClock instance]getTime];
     [_clockField setStringValue:_clockLabel];
     
-    double progress = 22;
+    double progress = [[KMClock instance]currentprogresshour];
     double percentdone = (progress/24);
-    NSLog(@"percentdone = %f",percentdone);
-    _progresspercent = [NSString stringWithFormat:@"%f",percentdone];
-    [_percent setStringValue:[NSString stringWithFormat:@"%@",_progresspercent]];
+    NSLog(@"percentdone = %.2f",percentdone);
+    _progresspercent = [NSString stringWithFormat:@"%.2f",percentdone];
+    NSString * stripdouble = [_progresspercent stringByReplacingOccurrencesOfString:@"0." withString:@""];
+    [_percent setStringValue:[NSString stringWithFormat:@"%@",stripdouble]];
     [_progressofDay setDoubleValue:progress];
     
     _clockAMPMLabel = [[KMClock instance]getLocalTime];
