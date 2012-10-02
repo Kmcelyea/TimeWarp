@@ -15,15 +15,6 @@
 
 @implementation KMClockViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
 
 -(void)awakeFromNib{
     [_progressofDay setStyle:NSProgressIndicatorBarStyle];
@@ -33,6 +24,7 @@
     [_progressofDay startAnimation:self];
     
     [self loadClock];
+    [self loadprogressbar];
 
 }
 
@@ -48,6 +40,8 @@
     _clockAMPMLabel = [[KMClock instance]getLocalTime];
     [_clockAMPMField setStringValue:_clockAMPMLabel];
     [_clockAMPMField setHidden:NO];
+    
+    
     _clockTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                      target:self
                                                    selector:@selector(updateTimes:)
@@ -57,24 +51,44 @@
     
 }
 
--(void)updateTimes:(NSTimer *)timer {
-    
-    _clockLabel = [[KMClock instance]getTime];
-    [_clockField setStringValue:_clockLabel];
+
+-(void)loadprogressbar {
     
     double progress = [[KMClock instance]currentprogresshour];
     double percentdone = (progress/24);
     NSLog(@"percentdone = %.2f",percentdone);
     _progresspercent = [NSString stringWithFormat:@"%.2f",percentdone];
     NSString * stripdouble = [_progresspercent stringByReplacingOccurrencesOfString:@"0." withString:@""];
-    [_percent setStringValue:[NSString stringWithFormat:@"%@",stripdouble]];
+    NSString * stripfulldot = [stripdouble stringByReplacingOccurrencesOfString:@"." withString:@""];
+    [_percent setStringValue:[NSString stringWithFormat:@"%@",stripfulldot]];
     [_progressofDay setDoubleValue:progress];
+}
+
+-(void)updateTimes:(NSTimer *)timer {
     
+    
+    //Update the main clock label every second.
+    _clockLabel = [[KMClock instance]getTime];
+    [_clockField setStringValue:_clockLabel];
+    
+   
+    //Get the value for AMPM Label for comparison.
     _clockAMPMLabel = [[KMClock instance]getLocalTime];
+    
     if (![_clockAMPMLabel isEqualToString:[_clockAMPMField stringValue]]) {
         [_clockAMPMField setStringValue:_clockAMPMLabel];
         
         
+        //Progress bar update if clockAMPM string is not equal to the displayed field value
+        //The idea is if the value is different than what is on the screen update it and set it to the value it got that was different. This if should also call this set of progress to reflect the change in hour.
+        double progress = [[KMClock instance]currentprogresshour];
+        double percentdone = (progress/24);
+        NSLog(@"percentdone = %.2f",percentdone);
+        _progresspercent = [NSString stringWithFormat:@"%.2f",percentdone];
+        NSString * stripdouble = [_progresspercent stringByReplacingOccurrencesOfString:@"0." withString:@""];
+        NSString * stripfulldot = [stripdouble stringByReplacingOccurrencesOfString:@"." withString:@""];
+        [_percent setStringValue:[NSString stringWithFormat:@"%@",stripfulldot]];
+        [_progressofDay setDoubleValue:progress];
     }
     
 

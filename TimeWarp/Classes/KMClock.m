@@ -73,14 +73,25 @@
     return _thePDT;
 }
 
+-(NSString *)getCDT{
+    
+    _theCDT = [NSString stringWithFormat:@"%@", [self currentCDTHour]];
+    
+    return _theCDT;
+}
+
 #pragma mark -
 #pragma mark Current time component methods
 -(NSInteger)currentHour {
     
     NSDate *now = [NSDate date];
     
+    NSTimeZone *timezone = [NSTimeZone timeZoneWithName:@"CDT"];
+    
     NSCalendar *calendar = [[NSCalendar alloc]
                             initWithCalendarIdentifier:NSGregorianCalendar];
+    [calendar setTimeZone:timezone];
+    
     NSDateComponents * components = [calendar components:NSHourCalendarUnit fromDate:now];
     
     return [components hour];
@@ -149,7 +160,8 @@
                             initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents * components = [calendar components:NSHourCalendarUnit fromDate:now];
     
-    
+    NSString * saveAbbreviation = [self LocalTZAbbreviation];
+    if ([saveAbbreviation isEqualToString:@"CDT"]) {
     NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+1];
     if ([components hour]+1 > 12) {
         if ([components hour]+1 == 12) {
@@ -195,6 +207,100 @@
     }
     return componenthour;
 }
+    if ([saveAbbreviation isEqualToString:@"MDT"]) {
+        NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+2];
+        if ([components hour]+2 > 12) {
+            if ([components hour]+2 == 12) {
+                return @"12 PM";
+            }
+            if ([components hour]+2 == 13) {
+                return @"1 PM";
+            }
+            if ([components hour]+2 == 14) {
+                return @"2 PM";
+            }
+            if ([components hour]+2 == 15) {
+                return @"3 PM";
+            }
+            if ([components hour]+2 == 16) {
+                return @"4 PM";
+            }
+            if ([components hour]+2 == 17) {
+                return @"5 PM";
+            }
+            if ([components hour]+2 == 18) {
+                return @"6 PM";
+            }
+            if ([components hour]+2 == 19) {
+                return @"7 PM";
+            }
+            if ([components hour]+2 == 20) {
+                return @"8 PM";
+            }
+            if ([components hour]+2 == 21) {
+                return @"9 PM";
+            }
+            if ([components hour]+2 == 22) {
+                return @"10 PM";
+            }
+            if ([components hour]+2 == 23) {
+                return @"11 PM";
+            }
+            if ([components hour]+2 == 24) {
+                return @"12 AM";
+            }
+            else return @"UNDEFINED";
+        }
+        return componenthour;
+    }
+    if ([saveAbbreviation isEqualToString:@"PDT"]) {
+        NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+3];
+        if ([components hour]+3 > 12) {
+            if ([components hour]+3 == 12) {
+                return @"12 PM";
+            }
+            if ([components hour]+3 == 13) {
+                return @"1 PM";
+            }
+            if ([components hour]+3 == 14) {
+                return @"2 PM";
+            }
+            if ([components hour]+3 == 15) {
+                return @"3 PM";
+            }
+            if ([components hour]+3 == 16) {
+                return @"4 PM";
+            }
+            if ([components hour]+3 == 17) {
+                return @"5 PM";
+            }
+            if ([components hour]+3 == 18) {
+                return @"6 PM";
+            }
+            if ([components hour]+3 == 19) {
+                return @"7 PM";
+            }
+            if ([components hour]+3 == 20) {
+                return @"8 PM";
+            }
+            if ([components hour]+3 == 21) {
+                return @"9 PM";
+            }
+            if ([components hour]+3 == 22) {
+                return @"10 PM";
+            }
+            if ([components hour]+3 == 23) {
+                return @"11 PM";
+            }
+            if ([components hour]+3 == 24) {
+                return @"12 AM";
+            }
+            else return @"UNDEFINED";
+        }
+        return componenthour;
+    }
+    else return @"0 AM";
+}
 -(NSString *)currentPDTHour {
     
     NSDate *now = [NSDate date];
@@ -203,51 +309,147 @@
                             initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents * components = [calendar components:NSHourCalendarUnit fromDate:now];
     
-    
-    NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-2];
-    if ([components hour]-2 > 12) {
-        if ([components hour]-2 == 12) {
-            return @"12 PM";
+    NSString * saveAbbreviation = [self LocalTZAbbreviation];
+    if ([saveAbbreviation isEqualToString:@"CDT"]) {
+        NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-2];
+        if ([components hour]-2 > 12) {
+            if ([components hour]-2 == 12) {
+                return @"12 PM";
+            }
+            if ([components hour]-2 == 13) {
+                return @"1 PM";
+            }
+            if ([components hour]-2 == 14) {
+                return @"2 PM";
+            }
+            if ([components hour]-2 == 15) {
+                return @"3 PM";
+            }
+            if ([components hour]-2 == 16) {
+                return @"4 PM";
+            }
+            if ([components hour]-2 == 17) {
+                return @"5 PM";
+            }
+            if ([components hour]-2 == 18) {
+                return @"6 PM";
+            }
+            if ([components hour]-2 == 19) {
+                return @"7 PM";
+            }
+            if ([components hour]-2 == 20) {
+                return @"8 PM";
+            }
+            if ([components hour]-2 == 21) {
+                return @"9 PM";
+            }
+            if ([components hour]-2 == 22) {
+                return @"10 PM";
+            }
+            if ([components hour]-2 == 23) {
+                return @"11 PM";
+            }
+            if ([components hour]-2 == 24) {
+                return @"12 AM";
+            }
+            else return @"UNDEFINED";
         }
-        if ([components hour]-2 == 13) {
-            return @"1 PM";
-        }
-        if ([components hour]-2 == 14) {
-            return @"2 PM";
-        }
-        if ([components hour]-2 == 15) {
-            return @"3 PM";
-        }
-        if ([components hour]-2 == 16) {
-            return @"4 PM";
-        }
-        if ([components hour]-2 == 17) {
-            return @"5 PM";
-        }
-        if ([components hour]-2 == 18) {
-            return @"6 PM";
-        }
-        if ([components hour]-2 == 19) {
-            return @"7 PM";
-        }
-        if ([components hour]-2 == 20) {
-            return @"8 PM";
-        }
-        if ([components hour]-2 == 21) {
-            return @"9 PM";
-        }
-        if ([components hour]-2 == 22) {
-            return @"10 PM";
-        }
-        if ([components hour]-2 == 23) {
-            return @"11 PM";
-        }
-        if ([components hour]-2 == 24) {
-            return @"12 AM";
-        }
-        else return @"UNDEFINED";
+        return componenthour;
     }
-    return componenthour;
+    if ([saveAbbreviation isEqualToString:@"MDT"]) {
+        NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-1];
+        if ([components hour]-1 > 12) {
+            if ([components hour]-1 == 12) {
+                return @"12 PM";
+            }
+            if ([components hour]-1 == 13) {
+                return @"1 PM";
+            }
+            if ([components hour]-1 == 14) {
+                return @"2 PM";
+            }
+            if ([components hour]-1 == 15) {
+                return @"3 PM";
+            }
+            if ([components hour]-1 == 16) {
+                return @"4 PM";
+            }
+            if ([components hour]-1 == 17) {
+                return @"5 PM";
+            }
+            if ([components hour]-1 == 18) {
+                return @"6 PM";
+            }
+            if ([components hour]-1 == 19) {
+                return @"7 PM";
+            }
+            if ([components hour]-1 == 20) {
+                return @"8 PM";
+            }
+            if ([components hour]-1 == 21) {
+                return @"9 PM";
+            }
+            if ([components hour]-1 == 22) {
+                return @"10 PM";
+            }
+            if ([components hour]-1 == 23) {
+                return @"11 PM";
+            }
+            if ([components hour]-1 == 24) {
+                return @"12 AM";
+            }
+            else return @"UNDEFINED";
+        }
+        return componenthour;
+    }
+    if ([saveAbbreviation isEqualToString:@"EDT"]) {
+        NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-3];
+        if ([components hour]-3 > 12) {
+            if ([components hour]-3 == 12) {
+                return @"12 PM";
+            }
+            if ([components hour]-3 == 13) {
+                return @"1 PM";
+            }
+            if ([components hour]-3 == 14) {
+                return @"2 PM";
+            }
+            if ([components hour]-3 == 15) {
+                return @"3 PM";
+            }
+            if ([components hour]-3 == 16) {
+                return @"4 PM";
+            }
+            if ([components hour]-3 == 17) {
+                return @"5 PM";
+            }
+            if ([components hour]-3 == 18) {
+                return @"6 PM";
+            }
+            if ([components hour]-3 == 19) {
+                return @"7 PM";
+            }
+            if ([components hour]-3 == 20) {
+                return @"8 PM";
+            }
+            if ([components hour]-3 == 21) {
+                return @"9 PM";
+            }
+            if ([components hour]-3 == 22) {
+                return @"10 PM";
+            }
+            if ([components hour]-3 == 23) {
+                return @"11 PM";
+            }
+            if ([components hour]-3 == 24) {
+                return @"12 AM";
+            }
+            else return @"UNDEFINED";
+        }
+        return componenthour;
+    }
+    else return @"0 AM";
+    
 }
 
 -(NSString *)currentMDTHour {
@@ -259,53 +461,297 @@
     NSDateComponents * components = [calendar components:NSHourCalendarUnit fromDate:now];
     
     
-    NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-1];
-    if ([components hour]-1 > 12) {
-        if ([components hour]-1 == 12) {
-            return @"12 PM";
+    NSString * saveAbbreviation = [self LocalTZAbbreviation];
+    if ([saveAbbreviation isEqualToString:@"CDT"]) {
+        NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-1];
+        if ([components hour]-1 > 12) {
+            if ([components hour]-1 == 12) {
+                return @"12 PM";
+            }
+            if ([components hour]-1 == 13) {
+                return @"1 PM";
+            }
+            if ([components hour]-1 == 14) {
+                return @"2 PM";
+            }
+            if ([components hour]-1 == 15) {
+                return @"3 PM";
+            }
+            if ([components hour]-1 == 16) {
+                return @"4 PM";
+            }
+            if ([components hour]-1 == 17) {
+                return @"5 PM";
+            }
+            if ([components hour]-1 == 18) {
+                return @"6 PM";
+            }
+            if ([components hour]-1 == 19) {
+                return @"7 PM";
+            }
+            if ([components hour]-1 == 20) {
+                return @"8 PM";
+            }
+            if ([components hour]-1 == 21) {
+                return @"9 PM";
+            }
+            if ([components hour]-1 == 22) {
+                return @"10 PM";
+            }
+            if ([components hour]-1 == 23) {
+                return @"11 PM";
+            }
+            if ([components hour]-1 == 24) {
+                return @"12 AM";
+            }
+            else return @"UNDEFINED";
         }
-        if ([components hour]-1 == 13) {
-            return @"1 PM";
-        }
-        if ([components hour]-1 == 14) {
-            return @"2 PM";
-        }
-        if ([components hour]-1 == 15) {
-            return @"3 PM";
-        }
-        if ([components hour]-1 == 16) {
-            return @"4 PM";
-        }
-        if ([components hour]-1 == 17) {
-            return @"5 PM";
-        }
-        if ([components hour]-1 == 18) {
-            return @"6 PM";
-        }
-        if ([components hour]-1 == 19) {
-            return @"7 PM";
-        }
-        if ([components hour]-1 == 20) {
-            return @"8 PM";
-        }
-        if ([components hour]-1 == 21) {
-            return @"9 PM";
-        }
-        if ([components hour]-1 == 22) {
-            return @"10 PM";
-        }
-        if ([components hour]-1 == 23) {
-            return @"11 PM";
-        }
-        if ([components hour]-1 == 24) {
-            return @"12 AM";
-        }
-        else return @"UNDEFINED";
+        return componenthour;
     }
-    return componenthour;
-
+    if ([saveAbbreviation isEqualToString:@"EDT"]) {
+        NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-2];
+        if ([components hour]-2 > 12) {
+            if ([components hour]-2 == 12) {
+                return @"12 PM";
+            }
+            if ([components hour]-2 == 13) {
+                return @"1 PM";
+            }
+            if ([components hour]-2 == 14) {
+                return @"2 PM";
+            }
+            if ([components hour]-2 == 15) {
+                return @"3 PM";
+            }
+            if ([components hour]-2 == 16) {
+                return @"4 PM";
+            }
+            if ([components hour]-2 == 17) {
+                return @"5 PM";
+            }
+            if ([components hour]-2 == 18) {
+                return @"6 PM";
+            }
+            if ([components hour]-2 == 19) {
+                return @"7 PM";
+            }
+            if ([components hour]-2 == 20) {
+                return @"8 PM";
+            }
+            if ([components hour]-2 == 21) {
+                return @"9 PM";
+            }
+            if ([components hour]-2 == 22) {
+                return @"10 PM";
+            }
+            if ([components hour]-2 == 23) {
+                return @"11 PM";
+            }
+            if ([components hour]-2 == 24) {
+                return @"12 AM";
+            }
+            else return @"UNDEFINED";
+        }
+        return componenthour;
+    }
+    if ([saveAbbreviation isEqualToString:@"PDT"]) {
+        NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+1];
+        if ([components hour]+1 > 12) {
+            if ([components hour]+1 == 12) {
+                return @"12 PM";
+            }
+            if ([components hour]+1 == 13) {
+                return @"1 PM";
+            }
+            if ([components hour]+1 == 14) {
+                return @"2 PM";
+            }
+            if ([components hour]+1 == 15) {
+                return @"3 PM";
+            }
+            if ([components hour]+1 == 16) {
+                return @"4 PM";
+            }
+            if ([components hour]+1 == 17) {
+                return @"5 PM";
+            }
+            if ([components hour]+1 == 18) {
+                return @"6 PM";
+            }
+            if ([components hour]+1 == 19) {
+                return @"7 PM";
+            }
+            if ([components hour]+1 == 20) {
+                return @"8 PM";
+            }
+            if ([components hour]+1 == 21) {
+                return @"9 PM";
+            }
+            if ([components hour]+1 == 22) {
+                return @"10 PM";
+            }
+            if ([components hour]+1 == 23) {
+                return @"11 PM";
+            }
+            if ([components hour]+1 == 24) {
+                return @"12 AM";
+            }
+            else return @"UNDEFINED";
+        }
+        return componenthour;
+    }
+    else return @"0 AM";
 }
-
+-(NSString *)currentCDTHour {
+    
+    NSDate *now = [NSDate date];
+    
+    NSCalendar *calendar = [[NSCalendar alloc]
+                            initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents * components = [calendar components:NSHourCalendarUnit fromDate:now];
+    
+    
+    NSString * saveAbbreviation = [self LocalTZAbbreviation];
+    if ([saveAbbreviation isEqualToString:@"PDT"]) {
+        NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+2];
+        if ([components hour]+2 > 12) {
+            if ([components hour]+2 == 12) {
+                return @"12 PM";
+            }
+            if ([components hour]+2 == 13) {
+                return @"1 PM";
+            }
+            if ([components hour]+2 == 14) {
+                return @"2 PM";
+            }
+            if ([components hour]+2 == 15) {
+                return @"3 PM";
+            }
+            if ([components hour]+2 == 16) {
+                return @"4 PM";
+            }
+            if ([components hour]+2 == 17) {
+                return @"5 PM";
+            }
+            if ([components hour]+2 == 18) {
+                return @"6 PM";
+            }
+            if ([components hour]+2 == 19) {
+                return @"7 PM";
+            }
+            if ([components hour]+2 == 20) {
+                return @"8 PM";
+            }
+            if ([components hour]+2 == 21) {
+                return @"9 PM";
+            }
+            if ([components hour]+2 == 22) {
+                return @"10 PM";
+            }
+            if ([components hour]+2 == 23) {
+                return @"11 PM";
+            }
+            if ([components hour]+2 == 24) {
+                return @"12 AM";
+            }
+            else return @"UNDEFINED";
+        }
+        return componenthour;
+    }
+    if ([saveAbbreviation isEqualToString:@"MDT"]) {
+        NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+1];
+        if ([components hour]+1 > 12) {
+            if ([components hour]+1 == 12) {
+                return @"12 PM";
+            }
+            if ([components hour]+1 == 13) {
+                return @"1 PM";
+            }
+            if ([components hour]+1 == 14) {
+                return @"2 PM";
+            }
+            if ([components hour]+1 == 15) {
+                return @"3 PM";
+            }
+            if ([components hour]+1 == 16) {
+                return @"4 PM";
+            }
+            if ([components hour]+1 == 17) {
+                return @"5 PM";
+            }
+            if ([components hour]+1 == 18) {
+                return @"6 PM";
+            }
+            if ([components hour]+1 == 19) {
+                return @"7 PM";
+            }
+            if ([components hour]+1 == 20) {
+                return @"8 PM";
+            }
+            if ([components hour]+1 == 21) {
+                return @"9 PM";
+            }
+            if ([components hour]+1 == 22) {
+                return @"10 PM";
+            }
+            if ([components hour]+1 == 23) {
+                return @"11 PM";
+            }
+            if ([components hour]+1 == 24) {
+                return @"12 AM";
+            }
+            else return @"UNDEFINED";
+        }
+        return componenthour;
+    }
+    if ([saveAbbreviation isEqualToString:@"EDT"]) {
+        NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-1];
+        if ([components hour]-1 > 12) {
+            if ([components hour]-1 == 12) {
+                return @"12 PM";
+            }
+            if ([components hour]-1 == 13) {
+                return @"1 PM";
+            }
+            if ([components hour]-1 == 14) {
+                return @"2 PM";
+            }
+            if ([components hour]-1 == 15) {
+                return @"3 PM";
+            }
+            if ([components hour]-1 == 16) {
+                return @"4 PM";
+            }
+            if ([components hour]-1 == 17) {
+                return @"5 PM";
+            }
+            if ([components hour]-1 == 18) {
+                return @"6 PM";
+            }
+            if ([components hour]-1 == 19) {
+                return @"7 PM";
+            }
+            if ([components hour]-1 == 20) {
+                return @"8 PM";
+            }
+            if ([components hour]-1 == 21) {
+                return @"9 PM";
+            }
+            if ([components hour]-1 == 22) {
+                return @"10 PM";
+            }
+            if ([components hour]-1 == 23) {
+                return @"11 PM";
+            }
+            if ([components hour]-1 == 24) {
+                return @"12 AM";
+            }
+            else return @"UNDEFINED";
+        }
+        return componenthour;
+    }
+    else return @"0 AM";
+}
 
 -(NSInteger)currentMinute {
     NSDate *now = [NSDate date];
@@ -337,9 +783,11 @@
 -(double)currentprogresshour {
     
     NSDate *now = [NSDate date];
+
     
     NSCalendar *calendar = [[NSCalendar alloc]
                             initWithCalendarIdentifier:NSGregorianCalendar];
+
     NSDateComponents * components = [calendar components:NSHourCalendarUnit fromDate:now];
     
     return [components hour];

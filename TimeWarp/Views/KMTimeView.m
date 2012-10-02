@@ -65,7 +65,7 @@
     
     
     
-    NSString * local = [NSString stringWithFormat:@"%@  %ld:%ld:%@ %@",[[KMClock instance]getLocalTime], [self currentHour],[self currentMinute],secondpadding, [self LocalTZAbbreviation]];
+    NSString * local = [NSString stringWithFormat:@"%@  %ld:%@:%@ %@",[[KMClock instance]getLocalTime], [self currentHour],minutepadding,secondpadding, [self LocalTZAbbreviation]];
     [_LocalTime setStringValue:local];
     NSString * saveAbbreviation = [self LocalTZAbbreviation];
     
@@ -93,7 +93,7 @@
     
     if ([saveAbbreviation isEqualToString:@"EDT"])
     {
-        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getLocalTime], [self currentHour]-1,minutepadding,secondpadding];
+        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getCDT], [self currentHour]-1,minutepadding,secondpadding];
         NSString * third = [NSString stringWithFormat:@"%@  %ld:%@:%@ MDT",[[KMClock instance]getMDT], [self currentHour]-2,minutepadding,secondpadding];
         NSString * fourth = [NSString stringWithFormat:@"%@  %ld:%@:%@ PDT",[[KMClock instance]getPDT], [self currentHour]-3,minutepadding,secondpadding];
         
@@ -113,7 +113,7 @@
     
     if ([saveAbbreviation isEqualToString:@"MDT"])
     {
-        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getLocalTime], [self currentHour]+1,minutepadding,secondpadding];
+        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getCDT], [self currentHour]+1,minutepadding,secondpadding];
         NSString * third = [NSString stringWithFormat:@"%@  %ld:%@:%@ EDT",[[KMClock instance]getEDT], [self currentHour]+2,minutepadding,secondpadding];
         NSString * fourth = [NSString stringWithFormat:@"%@  %ld:%@:%@ PDT",[[KMClock instance]getPDT], [self currentHour]-1,minutepadding,secondpadding];
         
@@ -133,7 +133,7 @@
     
     if ([saveAbbreviation isEqualToString:@"PDT"])
     {
-        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getLocalTime], [self currentHour]+2,minutepadding,secondpadding];
+        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getCDT], [self currentHour]+2,minutepadding,secondpadding];
         NSString * third = [NSString stringWithFormat:@"%@  %ld:%@:%@ EDT",[[KMClock instance]getEDT], [self currentHour]+3,minutepadding,secondpadding];
         NSString * fourth = [NSString stringWithFormat:@"%@  %ld:%@:%@ MDT",[[KMClock instance]getMDT], [self currentHour]+1,minutepadding,secondpadding];
         
@@ -199,7 +199,7 @@
     
     
     
-    NSString * local = [NSString stringWithFormat:@"%@  %ld:%ld:%@ %@",[[KMClock instance]getLocalTime], [self currentHour],[self currentMinute],secondpadding, [self LocalTZAbbreviation]];
+    NSString * local = [NSString stringWithFormat:@"%@  %ld:%@:%@ %@",[[KMClock instance]getLocalTime], [self currentHour],minutepadding,secondpadding, [self LocalTZAbbreviation]];
     [_LocalTime setStringValue:local];
     NSString * saveAbbreviation = [self LocalTZAbbreviation];
     
@@ -222,7 +222,7 @@
     
     if ([saveAbbreviation isEqualToString:@"EDT"])
     {
-        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getLocalTime], [self currentHour]-1,minutepadding,secondpadding];
+        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getCDT], [self currentHour]-1,minutepadding,secondpadding];
         NSString * third = [NSString stringWithFormat:@"%@  %ld:%@:%@ MDT",[[KMClock instance]getMDT], [self currentHour]-2,minutepadding,secondpadding];
         NSString * fourth = [NSString stringWithFormat:@"%@  %ld:%@:%@ PDT",[[KMClock instance]getPDT], [self currentHour]-3,minutepadding,secondpadding];
         
@@ -238,7 +238,7 @@
     
     if ([saveAbbreviation isEqualToString:@"MDT"])
     {
-        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getLocalTime], [self currentHour]+1,minutepadding,secondpadding];
+        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getCDT], [self currentHour]+1,minutepadding,secondpadding];
         NSString * third = [NSString stringWithFormat:@"%@  %ld:%@:%@ EDT",[[KMClock instance]getEDT], [self currentHour]+2,minutepadding,secondpadding];
         NSString * fourth = [NSString stringWithFormat:@"%@  %ld:%@:%@ PDT",[[KMClock instance]getPDT], [self currentHour]-1,minutepadding,secondpadding];
         
@@ -254,7 +254,7 @@
     
     if ([saveAbbreviation isEqualToString:@"PDT"])
     {
-        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getLocalTime], [self currentHour]+2,minutepadding,secondpadding];
+        NSString * second = [NSString stringWithFormat:@"%@  %ld:%@:%@ CDT",[[KMClock instance]getCDT], [self currentHour]+2,minutepadding,secondpadding];
         NSString * third = [NSString stringWithFormat:@"%@  %ld:%@:%@ EDT",[[KMClock instance]getEDT], [self currentHour]+3,minutepadding,secondpadding];
         NSString * fourth = [NSString stringWithFormat:@"%@  %ld:%@:%@ MDT",[[KMClock instance]getMDT], [self currentHour]+1,minutepadding,secondpadding];
         

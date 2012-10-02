@@ -32,6 +32,8 @@
 @property(nonatomic,assign)NSString *thePDT;
 @property(nonatomic,strong)NSString *getPDT;
 
+@property(nonatomic,assign)NSString *theCDT;
+@property(nonatomic,strong)NSString *getCDT;
 
 @property(nonatomic,assign)NSInteger *currenthour;
 
