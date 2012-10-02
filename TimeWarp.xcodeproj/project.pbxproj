@@ -12,6 +12,9 @@
 		9204599D161A2E5E00F3803B /* KMClockMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9204599C161A2E5E00F3803B /* KMClockMenu.m */; };
 		9204599F161A31FC00F3803B /* Time.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9204599E161A31FC00F3803B /* Time.plist */; };
 		920A1FFC161B34EE005DB92C /* KMTickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 920A1FFB161B34EE005DB92C /* KMTickerViewController.m */; };
+		920A1FFF161B4937005DB92C /* License.html in Resources */ = {isa = PBXBuildFile; fileRef = 920A1FFE161B4937005DB92C /* License.html */; };
+		920A2002161B4981005DB92C /* KMLicenseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 920A2001161B4980005DB92C /* KMLicenseView.m */; };
+		920A2004161B4AEA005DB92C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920A2003161B4AE9005DB92C /* WebKit.framework */; };
 		9274E54D16139B2400DBD863 /* KMSchemeSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9274E54C16139B2400DBD863 /* KMSchemeSet.m */; };
 		92995AA0160B61A4001D26D4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92995A9F160B61A4001D26D4 /* Cocoa.framework */; };
 		92995AAA160B61A4001D26D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92995AA8160B61A4001D26D4 /* InfoPlist.strings */; };
@@ -39,6 +42,10 @@
 		9204599E161A31FC00F3803B /* Time.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Time.plist; path = Configuration/Time.plist; sourceTree = "<group>"; };
 		920A1FFA161B34EE005DB92C /* KMTickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMTickerViewController.h; path = Views/KMTickerViewController.h; sourceTree = "<group>"; };
 		920A1FFB161B34EE005DB92C /* KMTickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMTickerViewController.m; path = Views/KMTickerViewController.m; sourceTree = "<group>"; };
+		920A1FFE161B4937005DB92C /* License.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = License.html; sourceTree = "<group>"; };
+		920A2000161B4980005DB92C /* KMLicenseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMLicenseView.h; path = Classes/KMLicenseView.h; sourceTree = "<group>"; };
+		920A2001161B4980005DB92C /* KMLicenseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMLicenseView.m; path = Classes/KMLicenseView.m; sourceTree = "<group>"; };
+		920A2003161B4AE9005DB92C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9274E54B16139B2400DBD863 /* KMSchemeSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSchemeSet.h; sourceTree = "<group>"; };
 		9274E54C16139B2400DBD863 /* KMSchemeSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSchemeSet.m; sourceTree = "<group>"; };
 		92995A9B160B61A4001D26D4 /* TimeWarp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeWarp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920A2004161B4AEA005DB92C /* WebKit.framework in Frameworks */,
 				92995AA0160B61A4001D26D4 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +112,7 @@
 		92995A9E160B61A4001D26D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				920A2003161B4AE9005DB92C /* WebKit.framework */,
 				92995A9F160B61A4001D26D4 /* Cocoa.framework */,
 				92995AA1160B61A4001D26D4 /* Other Frameworks */,
 			);
@@ -146,6 +155,7 @@
 				92995AAE160B61A4001D26D4 /* Credits.rtf */,
 				92A1249916124BF0005D8A37 /* ColorScheme.plist */,
 				9204599E161A31FC00F3803B /* Time.plist */,
+				920A1FFE161B4937005DB92C /* License.html */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -186,6 +196,8 @@
 				92045995161A287300F3803B /* KMClock.m */,
 				9204599B161A2E5E00F3803B /* KMClockMenu.h */,
 				9204599C161A2E5E00F3803B /* KMClockMenu.m */,
+				920A2000161B4980005DB92C /* KMLicenseView.h */,
+				920A2001161B4980005DB92C /* KMLicenseView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -266,6 +278,7 @@
 				92A1249A16124BF0005D8A37 /* ColorScheme.plist in Resources */,
 				92E1F19E1615015600EE38A5 /* construct.icns in Resources */,
 				9204599F161A31FC00F3803B /* Time.plist in Resources */,
+				920A1FFF161B4937005DB92C /* License.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +302,7 @@
 				9204599A161A2A7800F3803B /* KMClockViewController.m in Sources */,
 				9204599D161A2E5E00F3803B /* KMClockMenu.m in Sources */,
 				920A1FFC161B34EE005DB92C /* KMTickerViewController.m in Sources */,
+				920A2002161B4981005DB92C /* KMLicenseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,8 @@
 TimeWarp
 ========
+Creative Commons License
+http://creativecommons.org/licenses/by-nc/3.0/
+Attribution and non-commerical
 
 A Timezone OSX application (10.7 Target) 
 Will be used to set Count downs and see CDT,PDT,MDT,EDT zones.
