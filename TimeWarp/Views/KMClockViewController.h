@@ -19,6 +19,8 @@
 @property (nonatomic, assign)IBOutlet NSProgressIndicator *progressofDay;
 @property (nonatomic, assign)NSString *progresspercent;
 @property (nonatomic, assign)IBOutlet NSTextField *percent;
+@property (nonatomic, assign)IBOutlet NSTextField *staticpercent;
+@property (nonatomic, assign)IBOutlet NSTextField *staticprogress;
 -(void)updateTimes:(NSTimer *)timer;
 
 @end

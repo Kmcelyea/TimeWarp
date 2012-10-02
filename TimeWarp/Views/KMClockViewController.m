@@ -34,13 +34,18 @@
 -(void)loadClock{
     
    _clockLabel = [[KMClock instance]getTime];
+    [_clockField setTextColor:[[KMConfiguration instance]localTimeColor]];
     [_clockField setStringValue:_clockLabel];
     [_clockField setHidden:NO];
     
     _clockAMPMLabel = [[KMClock instance]getLocalTime];
+    [_clockAMPMField setTextColor:[[KMConfiguration instance]localTimeColor]];
     [_clockAMPMField setStringValue:_clockAMPMLabel];
     [_clockAMPMField setHidden:NO];
     
+    [_percent setTextColor:[[KMConfiguration instance]localTimeColor]];
+    [_staticpercent setTextColor:[[KMConfiguration instance]TimeColor2]];
+    [_staticprogress setTextColor:[[KMConfiguration instance]TimeColor2]];
     
     _clockTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                      target:self
@@ -65,8 +70,11 @@
 }
 
 -(void)updateTimes:(NSTimer *)timer {
-    
-    
+    [_staticpercent setTextColor:[[KMConfiguration instance]TimeColor2]];
+    [_staticprogress setTextColor:[[KMConfiguration instance]TimeColor2]];
+    [_percent setTextColor:[[KMConfiguration instance]localTimeColor]];
+    [_clockAMPMField setTextColor:[[KMConfiguration instance]localTimeColor]];
+    [_clockField setTextColor:[[KMConfiguration instance]localTimeColor]];
     //Update the main clock label every second.
     _clockLabel = [[KMClock instance]getTime];
     [_clockField setStringValue:_clockLabel];
