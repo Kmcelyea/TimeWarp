@@ -11,6 +11,7 @@
 		9204599A161A2A7800F3803B /* KMClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92045999161A2A7800F3803B /* KMClockViewController.m */; };
 		9204599D161A2E5E00F3803B /* KMClockMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9204599C161A2E5E00F3803B /* KMClockMenu.m */; };
 		9204599F161A31FC00F3803B /* Time.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9204599E161A31FC00F3803B /* Time.plist */; };
+		920A1FFC161B34EE005DB92C /* KMTickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 920A1FFB161B34EE005DB92C /* KMTickerViewController.m */; };
 		9274E54D16139B2400DBD863 /* KMSchemeSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9274E54C16139B2400DBD863 /* KMSchemeSet.m */; };
 		92995AA0160B61A4001D26D4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92995A9F160B61A4001D26D4 /* Cocoa.framework */; };
 		92995AAA160B61A4001D26D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92995AA8160B61A4001D26D4 /* InfoPlist.strings */; };
@@ -37,6 +38,8 @@
 		9204599B161A2E5E00F3803B /* KMClockMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMClockMenu.h; path = Classes/KMClockMenu.h; sourceTree = "<group>"; };
 		9204599C161A2E5E00F3803B /* KMClockMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMClockMenu.m; path = Classes/KMClockMenu.m; sourceTree = "<group>"; };
 		9204599E161A31FC00F3803B /* Time.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Time.plist; path = Configuration/Time.plist; sourceTree = "<group>"; };
+		920A1FFA161B34EE005DB92C /* KMTickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMTickerViewController.h; path = Views/KMTickerViewController.h; sourceTree = "<group>"; };
+		920A1FFB161B34EE005DB92C /* KMTickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMTickerViewController.m; path = Views/KMTickerViewController.m; sourceTree = "<group>"; };
 		9274E54B16139B2400DBD863 /* KMSchemeSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSchemeSet.h; sourceTree = "<group>"; };
 		9274E54C16139B2400DBD863 /* KMSchemeSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSchemeSet.m; sourceTree = "<group>"; };
 		92995A9B160B61A4001D26D4 /* TimeWarp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeWarp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +170,8 @@
 				92C93BF0160CBF87005CDD68 /* KMCountDownViewController.m */,
 				92045998161A2A7800F3803B /* KMClockViewController.h */,
 				92045999161A2A7800F3803B /* KMClockViewController.m */,
+				920A1FFA161B34EE005DB92C /* KMTickerViewController.h */,
+				920A1FFB161B34EE005DB92C /* KMTickerViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				92045996161A287300F3803B /* KMClock.m in Sources */,
 				9204599A161A2A7800F3803B /* KMClockViewController.m in Sources */,
 				9204599D161A2E5E00F3803B /* KMClockMenu.m in Sources */,
+				920A1FFC161B34EE005DB92C /* KMTickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

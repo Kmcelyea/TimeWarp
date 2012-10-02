@@ -42,7 +42,11 @@
     [_clockwindow setBackgroundColor:[[KMConfiguration instance]BgColor]];
     [_clockwindow setLevel:CGShieldingWindowLevel()];
     
-
+    [_tickerwindow setBackgroundColor:[[KMConfiguration instance]BgColor]];
+    [_tickerwindow setOpaque:NO];
+    [_tickerwindow setFrame:[[KMConfiguration instance]positionRectTicker] display:YES];
+    [_tickerwindow setLevel:NSNormalWindowLevel - 1];
+    [_tickerwindow setMovableByWindowBackground:YES];
 
 }
 

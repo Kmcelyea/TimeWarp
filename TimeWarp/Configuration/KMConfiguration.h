@@ -41,6 +41,7 @@
 
 @property(nonatomic)NSRect positionRect;
 @property(nonatomic)NSRect positionRectSlide;
+@property(nonatomic)NSRect positionRectTicker;
 //@property(nonatomic, strong)NSRect * RectBottomleft;
 //@property(nonatomic, strong)NSRect * RectBottomright;
 //@property(nonatomic, strong)NSRect * RectTopleft;

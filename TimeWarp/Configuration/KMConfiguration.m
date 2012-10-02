@@ -308,6 +308,27 @@
     else return BottomLeft;
 }
 
+-(NSRect)positionRectTicker {
+    NSString *positiondata = [prefs stringForKey:@"position"];
+    if([positiondata isEqualToString:@"BottomLeft"]){
+        return BottomLeftTicker;
+        
+    }
+    if([positiondata isEqualToString:@"BottomRight"]){
+        return BottomRightTicker;
+        
+    }
+    if([positiondata isEqualToString:@"TopLeft"]){
+        return TopLeftTicker;
+        
+    }
+    if([positiondata isEqualToString:@"TopRight"]){
+        return TopRightTicker;
+        
+    }
+    else return BottomLeftTicker;
+}
+
 -(NSRect)positionRectSlide {
     NSString *positiondata = [prefs stringForKey:@"position"];
     if([positiondata isEqualToString:@"BottomLeft"]){

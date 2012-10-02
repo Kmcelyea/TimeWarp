@@ -38,4 +38,10 @@
 #define BottomRightSlide NSMakeRect(724, 0, 390, 217)
 #define TopRight NSMakeRect(1114, 661, 326, 217)
 #define TopRightSlide NSMakeRect(724, 661, 390, 217)
+
+
+#define BottomLeftTicker NSMakeRect(0,217,326,41)
+#define TopLeftTicker NSMakeRect(0,620,326,41)
+#define BottomRightTicker NSMakeRect(1114,217,326,41)
+#define TopRightTicker NSMakeRect(1114,620,326,41)
 #endif
