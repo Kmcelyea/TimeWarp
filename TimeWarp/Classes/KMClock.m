@@ -793,5 +793,21 @@
     return [components hour];
     
 }
+-(double)currentprogressmin {
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents * components = [calendar components:NSMinuteCalendarUnit fromDate:now];
+    
+    return [components minute];
+    
+}
 
+-(double)currentprogressSec {
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents * components = [calendar components:NSSecondCalendarUnit fromDate:now];
+    
+    return [components second];
+    
+}
 @end

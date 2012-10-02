@@ -13,6 +13,7 @@
 @property(assign)IBOutlet NSWindow *window;
 @property(assign)IBOutlet NSWindow *windowslide;
 @property(assign)IBOutlet NSWindow *windowticker;
+@property(assign)IBOutlet NSWindow *windowbarclock;
 
 -(IBAction)SetBottomLeft:(id)sender;
 -(IBAction)SetBottomRight:(id)sender;

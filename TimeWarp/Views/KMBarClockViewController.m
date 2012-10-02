@@ -7,6 +7,7 @@
 //
 
 #import "KMBarClockViewController.h"
+#import "KMClock.h"
 
 @interface KMBarClockViewController ()
 
@@ -14,14 +15,63 @@
 
 @implementation KMBarClockViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Initialization code here.
-    }
+-(void)awakeFromNib{
     
-    return self;
+    
+    [self loadclockbars];
+    
 }
 
+
+-(void)loadclockbars {
+    
+    double progress = [[KMClock instance]currentprogresshour];
+    double progressmin = [[KMClock instance]currentprogressmin];
+    double progressSec = [[KMClock instance]currentprogressSec];
+    
+    [_hourindicator setDoubleValue:progress];
+    [_minindicator setDoubleValue:progressmin];
+    [_secindicator setDoubleValue:progressSec];
+    [_hour setStringValue:[NSString stringWithFormat:@"%.f",progress]];
+    [_min setStringValue:[NSString stringWithFormat:@"%.f",progressmin]];
+    [_sec setStringValue:[NSString stringWithFormat:@"%.f",progressSec]];
+
+
+    _holdHour = progress;
+    _holdMin = progressmin;
+    _holdSec = progressSec;
+    
+    _tickerTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                    target:self
+                                                  selector:@selector(updateProgress:)
+                                                  userInfo:nil
+                                                   repeats:YES];
+}
+
+
+
+
+
+
+
+-(void)updateProgress:(NSTimer *)timer {
+    
+    
+    double progress = [[KMClock instance]currentprogresshour];
+    if (_holdHour != progress) {
+        [_hour setStringValue:[NSString stringWithFormat:@"%.f",progress]];
+        [_hourindicator setDoubleValue:progress];
+    }
+    double progressmin = [[KMClock instance]currentprogressmin];
+    if (_holdMin != progressmin) {
+        [_min setStringValue:[NSString stringWithFormat:@"%.f",progressmin]];
+          [_minindicator setDoubleValue:progressmin];
+    }
+    double progressSec = [[KMClock instance]currentprogressSec];
+    if (_holdSec != progressSec) {
+        [_sec setStringValue:[NSString stringWithFormat:@"%.f",progressSec]];
+          [_secindicator setDoubleValue:progressSec];
+    }
+ 
+}
 @end

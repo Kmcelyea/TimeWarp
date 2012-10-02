@@ -21,4 +21,14 @@
     
 }
 
+-(IBAction)showbarClock:(id)sender {
+    
+    [_barclockwindow makeKeyAndOrderFront:self];
+    
+}
+
+-(IBAction)hidebarClock:(id)sender {
+    [_barclockwindow orderOut:self];
+    
+}
 @end

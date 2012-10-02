@@ -329,6 +329,27 @@
     else return BottomLeftTicker;
 }
 
+-(NSRect)positionRectBarClock {
+    NSString *positiondata = [prefs stringForKey:@"position"];
+    if([positiondata isEqualToString:@"BottomLeft"]){
+        return BottomLeftBarClock;
+        
+    }
+    if([positiondata isEqualToString:@"BottomRight"]){
+        return BottomRightBarClock;
+        
+    }
+    if([positiondata isEqualToString:@"TopLeft"]){
+        return TopLeftBarClock;
+        
+    }
+    if([positiondata isEqualToString:@"TopRight"]){
+        return TopRightBarClock;
+        
+    }
+    else return BottomLeftBarClock;
+}
+
 -(NSRect)positionRectSlide {
     NSString *positiondata = [prefs stringForKey:@"position"];
     if([positiondata isEqualToString:@"BottomLeft"]){

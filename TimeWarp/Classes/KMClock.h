@@ -38,6 +38,8 @@
 @property(nonatomic,assign)NSInteger *currenthour;
 
 @property(nonatomic,assign)double currentprogresshour;
+@property(nonatomic,assign)double currentprogressmin;
+@property(nonatomic,assign)double currentprogressSec;
 + (KMClock *)instance;
 
 @end

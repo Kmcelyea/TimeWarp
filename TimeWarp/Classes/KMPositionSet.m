@@ -19,6 +19,7 @@
     [_window setFrame:[[KMConfiguration instance]positionRect] display:YES];
     [_windowslide setFrame:[[KMConfiguration instance]positionRectSlide] display:YES];
     [_windowticker setFrame:[[KMConfiguration instance]positionRectTicker] display:YES];
+    [_windowbarclock setFrame:[[KMConfiguration instance]positionRectBarClock] display:YES];
 }
 
 -(IBAction)SetBottomRight:(id)sender
@@ -28,7 +29,7 @@
     [_window setFrame:[[KMConfiguration instance]positionRect] display:YES];
     [_windowslide setFrame:[[KMConfiguration instance]positionRectSlide] display:YES];
     [_windowticker setFrame:[[KMConfiguration instance]positionRectTicker] display:YES];
-    
+    [_windowbarclock setFrame:[[KMConfiguration instance]positionRectBarClock] display:YES];
 }
 
 -(IBAction)SetTopLeft:(id)sender
@@ -38,7 +39,7 @@
     [_window setFrame:[[KMConfiguration instance]positionRect] display:YES];
     [_windowslide setFrame:[[KMConfiguration instance]positionRectSlide] display:YES];
     [_windowticker setFrame:[[KMConfiguration instance]positionRectTicker] display:YES];
-    
+    [_windowbarclock setFrame:[[KMConfiguration instance]positionRectBarClock] display:YES];
 }
 
 -(IBAction)SetTopRight:(id)sender
@@ -48,7 +49,7 @@
     [_window setFrame:[[KMConfiguration instance]positionRect] display:YES];
     [_windowslide setFrame:[[KMConfiguration instance]positionRectSlide] display:YES];
     [_windowticker setFrame:[[KMConfiguration instance]positionRectTicker] display:YES];
-    
+    [_windowbarclock setFrame:[[KMConfiguration instance]positionRectBarClock] display:YES];
 }
 
 

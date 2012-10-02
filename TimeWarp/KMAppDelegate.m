@@ -47,6 +47,16 @@
     [_tickerwindow setFrame:[[KMConfiguration instance]positionRectTicker] display:YES];
     [_tickerwindow setLevel:NSNormalWindowLevel - 1];
     [_tickerwindow setMovableByWindowBackground:YES];
+    
+    [_tickerwindow setBackgroundColor:[[KMConfiguration instance]BgColor]];
+    [_tickerwindow setOpaque:NO];
+    [_tickerwindow setFrame:[[KMConfiguration instance]positionRectTicker] display:YES];
+    [_tickerwindow setLevel:NSNormalWindowLevel - 1];
+    
+    [_barclockwindow setBackgroundColor:[[KMConfiguration instance]BgColor]];
+    [_barclockwindow setOpaque:NO];
+    [_barclockwindow setFrame:[[KMConfiguration instance]positionRectBarClock] display:YES];
+    [_barclockwindow setLevel:NSNormalWindowLevel - 1];
 
 }
 

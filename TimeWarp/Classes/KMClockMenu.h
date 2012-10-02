@@ -11,8 +11,12 @@
 @interface KMClockMenu : NSObject
 
 @property(nonatomic)IBOutlet NSWindow *clockwindow;
+@property(nonatomic)IBOutlet NSWindow *barclockwindow;
 
 -(IBAction)showClock:(id)sender;
 -(IBAction)hideClock:(id)sender;
+
+-(IBAction)showbarClock:(id)sender;
+-(IBAction)hidebarClock:(id)sender;
 
 @end

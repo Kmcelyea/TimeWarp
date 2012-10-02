@@ -44,4 +44,9 @@
 #define TopLeftTicker NSMakeRect(0,620,326,41)
 #define BottomRightTicker NSMakeRect(1114,217,326,41)
 #define TopRightTicker NSMakeRect(1114,620,326,41)
+
+#define BottomLeftBarClock NSMakeRect(0,258,326,79)
+#define TopLeftBarClock NSMakeRect(0,541,326,79)
+#define BottomRightBarClock NSMakeRect(1114,258,326,79)
+#define TopRightBarClock NSMakeRect(1114,541,326,79)
 #endif

@@ -24,6 +24,8 @@
 @property (assign) IBOutlet NSWindow *clockwindow;
 @property (assign) IBOutlet KMCountView *slideview;
 @property (assign) IBOutlet NSWindow *tickerwindow;
+@property (assign) IBOutlet NSWindow *barclockwindow;
+
 @property (nonatomic, weak)IBOutlet NSSegmentedControl *showsegment;
 
 
