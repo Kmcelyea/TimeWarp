@@ -29,6 +29,8 @@
 
      double progress = [[KMClock instance]currentprogresshour];
     [_ticker setDoubleValue:progress];
+    [_amount setStringValue:[NSString stringWithFormat:@"%.f/24",progress]];
+    _holdprogress = progress;
     _tickerTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                    target:self
                                                  selector:@selector(updateProgress:)
@@ -45,7 +47,14 @@
     
 
     double progress = [[KMClock instance]currentprogresshour];
-    [_ticker setDoubleValue:progress];
+    
+    if (_holdprogress != progress) {
+        [_ticker setDoubleValue:progress];
+        [_amount setStringValue:[NSString stringWithFormat:@"%.f/24",progress]];
+        NSLog(@"different progress updating");
+        _holdprogress = progress;
+    }
+   
     
 }
 

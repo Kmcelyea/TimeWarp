@@ -12,6 +12,8 @@
 
 @property (nonatomic)NSTimer *tickerTimer;
 @property(nonatomic, assign)IBOutlet NSLevelIndicator *ticker;
+@property(nonatomic, assign)double holdprogress;
+@property(nonatomic, assign)IBOutlet NSTextField *amount;
 
 -(void)updateProgress:(NSTimer *)timer;
 
