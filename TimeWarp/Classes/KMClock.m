@@ -163,10 +163,11 @@
     NSString * saveAbbreviation = [self LocalTZAbbreviation];
     if ([saveAbbreviation isEqualToString:@"CDT"]) {
     NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+1];
-    if ([components hour]+1 > 12) {
         if ([components hour]+1 == 12) {
             return @"12 PM";
         }
+        if ([components hour]+1 > 12) {
+        
         if ([components hour]+1 == 13) {
             return @"1 PM";
         }
@@ -209,10 +210,11 @@
 }
     if ([saveAbbreviation isEqualToString:@"MDT"]) {
         NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+2];
+        if ([components hour]+2 == 12) {
+            return @"12 PM";
+        }
         if ([components hour]+2 > 12) {
-            if ([components hour]+2 == 12) {
-                return @"12 PM";
-            }
+            
             if ([components hour]+2 == 13) {
                 return @"1 PM";
             }
@@ -255,10 +257,11 @@
     }
     if ([saveAbbreviation isEqualToString:@"PDT"]) {
         NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+3];
+        if ([components hour]+3 == 12) {
+            return @"12 PM";
+        }
         if ([components hour]+3 > 12) {
-            if ([components hour]+3 == 12) {
-                return @"12 PM";
-            }
+            
             if ([components hour]+3 == 13) {
                 return @"1 PM";
             }
@@ -312,10 +315,10 @@
     NSString * saveAbbreviation = [self LocalTZAbbreviation];
     if ([saveAbbreviation isEqualToString:@"CDT"]) {
         NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-2];
+        if ([components hour]-2 == 12) {
+             return  @"12 PM";
+        }
         if ([components hour]-2 > 12) {
-            if ([components hour]-2 == 12) {
-                return @"12 PM";
-            }
             if ([components hour]-2 == 13) {
                 return @"1 PM";
             }
@@ -358,10 +361,11 @@
     }
     if ([saveAbbreviation isEqualToString:@"MDT"]) {
         NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-1];
+        if ([components hour]-1 == 12) {
+            return @"12 PM";
+        }
         if ([components hour]-1 > 12) {
-            if ([components hour]-1 == 12) {
-                return @"12 PM";
-            }
+            
             if ([components hour]-1 == 13) {
                 return @"1 PM";
             }
@@ -404,10 +408,11 @@
     }
     if ([saveAbbreviation isEqualToString:@"EDT"]) {
         NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-3];
+        if ([components hour]-3 == 12) {
+            return @"12 PM";
+        }
         if ([components hour]-3 > 12) {
-            if ([components hour]-3 == 12) {
-                return @"12 PM";
-            }
+            
             if ([components hour]-3 == 13) {
                 return @"1 PM";
             }
@@ -464,10 +469,11 @@
     NSString * saveAbbreviation = [self LocalTZAbbreviation];
     if ([saveAbbreviation isEqualToString:@"CDT"]) {
         NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-1];
+        if ([components hour]-1 == 12) {
+            return @"12 PM";
+        }
         if ([components hour]-1 > 12) {
-            if ([components hour]-1 == 12) {
-                return @"12 PM";
-            }
+            
             if ([components hour]-1 == 13) {
                 return @"1 PM";
             }
@@ -510,10 +516,11 @@
     }
     if ([saveAbbreviation isEqualToString:@"EDT"]) {
         NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-2];
+        if ([components hour]-2 == 12) {
+            return @"12 PM";
+        }
         if ([components hour]-2 > 12) {
-            if ([components hour]-2 == 12) {
-                return @"12 PM";
-            }
+            
             if ([components hour]-2 == 13) {
                 return @"1 PM";
             }
@@ -556,10 +563,11 @@
     }
     if ([saveAbbreviation isEqualToString:@"PDT"]) {
         NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+1];
+        if ([components hour]+1 == 12) {
+            return @"12 PM";
+        }
         if ([components hour]+1 > 12) {
-            if ([components hour]+1 == 12) {
-                return @"12 PM";
-            }
+            
             if ([components hour]+1 == 13) {
                 return @"1 PM";
             }
@@ -614,10 +622,11 @@
     NSString * saveAbbreviation = [self LocalTZAbbreviation];
     if ([saveAbbreviation isEqualToString:@"PDT"]) {
         NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+2];
+        if ([components hour]+2 == 12) {
+            return @"12 PM";
+        }
         if ([components hour]+2 > 12) {
-            if ([components hour]+2 == 12) {
-                return @"12 PM";
-            }
+            
             if ([components hour]+2 == 13) {
                 return @"1 PM";
             }
@@ -660,10 +669,11 @@
     }
     if ([saveAbbreviation isEqualToString:@"MDT"]) {
         NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]+1];
+        if ([components hour]+1 == 12) {
+            return @"12 PM";
+        }
         if ([components hour]+1 > 12) {
-            if ([components hour]+1 == 12) {
-                return @"12 PM";
-            }
+            
             if ([components hour]+1 == 13) {
                 return @"1 PM";
             }
@@ -706,10 +716,11 @@
     }
     if ([saveAbbreviation isEqualToString:@"EDT"]) {
         NSString *componenthour = [NSString stringWithFormat:@"%ld AM",[components hour]-1];
+        if ([components hour]-1 == 12) {
+            return @"12 PM";
+        }
         if ([components hour]-1 > 12) {
-            if ([components hour]-1 == 12) {
-                return @"12 PM";
-            }
+            
             if ([components hour]-1 == 13) {
                 return @"1 PM";
             }
