@@ -16,7 +16,8 @@
 @property (nonatomic, assign)IBOutlet NSTextField *clockField;
 @property (nonatomic, assign)IBOutlet NSTextField *clockAMPMField;
 
-@property (nonatomic, assign)IBOutlet NSProgressIndicator *progressofDay;
+@property(nonatomic, assign)IBOutlet NSLevelIndicator *ticker;
+//@property (nonatomic, assign)IBOutlet NSProgressIndicator *progressofDay;
 @property (nonatomic, assign)NSString *progresspercent;
 @property (nonatomic, assign)IBOutlet NSTextField *percent;
 @property (nonatomic, assign)IBOutlet NSTextField *staticpercent;

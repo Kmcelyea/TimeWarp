@@ -17,11 +17,7 @@
 
 
 -(void)awakeFromNib{
-    [_progressofDay setStyle:NSProgressIndicatorBarStyle];
 
-    [_progressofDay setControlTint:NSBlueControlTint];
-    [_progressofDay setIndeterminate:NO];
-    [_progressofDay startAnimation:self];
     
     [self loadClock];
     [self loadprogressbar];
@@ -66,10 +62,12 @@
     NSString * stripdouble = [_progresspercent stringByReplacingOccurrencesOfString:@"0." withString:@""];
     NSString * stripfulldot = [stripdouble stringByReplacingOccurrencesOfString:@"." withString:@""];
     [_percent setStringValue:[NSString stringWithFormat:@"%@",stripfulldot]];
-    [_progressofDay setDoubleValue:progress];
+    [_ticker setDoubleValue:progress];
 }
 
 -(void)updateTimes:(NSTimer *)timer {
+    
+    
     [_staticpercent setTextColor:[[KMConfiguration instance]TimeColor2]];
     [_staticprogress setTextColor:[[KMConfiguration instance]TimeColor2]];
     [_percent setTextColor:[[KMConfiguration instance]localTimeColor]];
@@ -96,7 +94,7 @@
         NSString * stripdouble = [_progresspercent stringByReplacingOccurrencesOfString:@"0." withString:@""];
         NSString * stripfulldot = [stripdouble stringByReplacingOccurrencesOfString:@"." withString:@""];
         [_percent setStringValue:[NSString stringWithFormat:@"%@",stripfulldot]];
-        [_progressofDay setDoubleValue:progress];
+        [_ticker setDoubleValue:progress];
     }
     
 
