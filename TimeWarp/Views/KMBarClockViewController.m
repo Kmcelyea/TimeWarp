@@ -55,10 +55,9 @@
 
 
 
-
-
-
 -(void)updateProgress:(NSTimer *)timer {
+    
+    if ([_window isVisible]) {
     [_hour setTextColor:[[KMConfiguration instance]localTimeColor]];
     [_min setTextColor:[[KMConfiguration instance]localTimeColor]];
     [_sec setTextColor:[[KMConfiguration instance]TimeColor2]];
@@ -78,6 +77,10 @@
         [_sec setStringValue:[NSString stringWithFormat:@"%.f",progressSec]];
           [_secindicator setDoubleValue:progressSec];
     }
- 
+ }
+    else {
+        
+        
+    }
 }
 @end

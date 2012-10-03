@@ -22,6 +22,8 @@
 @property (nonatomic, assign)IBOutlet NSTextField *percent;
 @property (nonatomic, assign)IBOutlet NSTextField *staticpercent;
 @property (nonatomic, assign)IBOutlet NSTextField *staticprogress;
+
+@property (assign)IBOutlet NSWindow *window;
 -(void)updateTimes:(NSTimer *)timer;
 
 @end

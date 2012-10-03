@@ -67,6 +67,9 @@
 
 -(void)updateTimes:(NSTimer *)timer {
     
+    if ([_window isVisible]) {
+        
+    
     
     [_staticpercent setTextColor:[[KMConfiguration instance]TimeColor2]];
     [_staticprogress setTextColor:[[KMConfiguration instance]TimeColor2]];
@@ -89,14 +92,17 @@
         //The idea is if the value is different than what is on the screen update it and set it to the value it got that was different. This if should also call this set of progress to reflect the change in hour.
         double progress = [[KMClock instance]currentprogresshour];
         double percentdone = (progress/24);
-        NSLog(@"percentdone = %.2f",percentdone);
-        _progresspercent = [NSString stringWithFormat:@"%.2f",percentdone];
+                _progresspercent = [NSString stringWithFormat:@"%.2f",percentdone];
         NSString * stripdouble = [_progresspercent stringByReplacingOccurrencesOfString:@"0." withString:@""];
         NSString * stripfulldot = [stripdouble stringByReplacingOccurrencesOfString:@"." withString:@""];
         [_percent setStringValue:[NSString stringWithFormat:@"%@",stripfulldot]];
         [_ticker setDoubleValue:progress];
     }
-    
+    }
+    else {
+      
+        
+    }
 
 }
 
