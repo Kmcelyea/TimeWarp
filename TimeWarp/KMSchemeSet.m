@@ -132,6 +132,76 @@
     
 }
 
+-(IBAction)SetGrape:(id)sender{
+    [[KMConfiguration instance]setLc:@"Grape"];
+    [[KMConfiguration instance]setSc:@"Grape"];
+    [[KMConfiguration instance]setTc:@"Grape"];
+    [[KMConfiguration instance]setFc:@"Grape"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
+    [[KMConfiguration instance]saveSettings];
+}
+
+-(IBAction)SetBlueberry:(id)sender{
+    [[KMConfiguration instance]setLc:@"Blueberry"];
+    [[KMConfiguration instance]setSc:@"Blueberry"];
+    [[KMConfiguration instance]setTc:@"Blueberry"];
+    [[KMConfiguration instance]setFc:@"Blueberry"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
+    [[KMConfiguration instance]saveSettings];
+}
+
+-(IBAction)SetLemon:(id)sender{
+    [[KMConfiguration instance]setLc:@"Lemon"];
+    [[KMConfiguration instance]setSc:@"Lemon"];
+    [[KMConfiguration instance]setTc:@"Lemon"];
+    [[KMConfiguration instance]setFc:@"Lemon"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
+    [[KMConfiguration instance]saveSettings];
+}
+
+-(IBAction)SetLime:(id)sender{
+    [[KMConfiguration instance]setLc:@"Lime"];
+    [[KMConfiguration instance]setSc:@"Lime"];
+    [[KMConfiguration instance]setTc:@"Lime"];
+    [[KMConfiguration instance]setFc:@"Lime"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
+    [[KMConfiguration instance]saveSettings];
+}
+
+-(IBAction)SetFern:(id)sender{
+    [[KMConfiguration instance]setLc:@"Fern"];
+    [[KMConfiguration instance]setSc:@"Fern"];
+    [[KMConfiguration instance]setTc:@"Fern"];
+    [[KMConfiguration instance]setFc:@"Fern"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
+    [[KMConfiguration instance]saveSettings];
+}
+
+-(IBAction)SetClover:(id)sender{
+    [[KMConfiguration instance]setLc:@"Clover"];
+    [[KMConfiguration instance]setSc:@"Clover"];
+    [[KMConfiguration instance]setTc:@"Clover"];
+    [[KMConfiguration instance]setFc:@"Clover"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
+    [[KMConfiguration instance]saveSettings];
+}
+
+-(IBAction)SetStrawberry:(id)sender{
+    [[KMConfiguration instance]setLc:@"Strawberry"];
+    [[KMConfiguration instance]setSc:@"Strawberry"];
+    [[KMConfiguration instance]setTc:@"Strawberry"];
+    [[KMConfiguration instance]setFc:@"Strawberry"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
+    [[KMConfiguration instance]saveSettings];
+}
+
 -(IBAction)InvertBackground:(id)sender{
     NSString * currentset = [[KMConfiguration instance]bg];
     if ([currentset isEqualToString:@"Black"]) {

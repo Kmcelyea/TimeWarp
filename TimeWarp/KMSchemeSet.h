@@ -23,5 +23,13 @@
 -(IBAction)SetOcean:(id)sender;
 -(IBAction)SetTang:(id)sender;
 
+-(IBAction)SetGrape:(id)sender;
+-(IBAction)SetBlueberry:(id)sender;
+-(IBAction)SetLemon:(id)sender;
+-(IBAction)SetLime:(id)sender;
+-(IBAction)SetFern:(id)sender;
+-(IBAction)SetClover:(id)sender;
+-(IBAction)SetStrawberry:(id)sender;
+
 -(IBAction)InvertBackground:(id)sender;
 @end

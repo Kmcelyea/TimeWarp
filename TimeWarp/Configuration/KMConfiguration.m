@@ -56,54 +56,89 @@
 
 
 -(NSColor *)localTimeColor {
-    NSString *localTimeData=[prefs stringForKey:@"localColor"];
-    if ([localTimeData isEqualToString:@"White"]) {
+    NSString *colorData=[prefs stringForKey:@"localColor"];
+    if ([colorData isEqualToString:@"White"]) {
         return White;
     }
     
-    if ([localTimeData isEqualToString:@"Cyan"])
+    if ([colorData isEqualToString:@"Cyan"])
     {
         return Cyan;
         
     }
-    if ([localTimeData isEqualToString:@"Green"])
+    if ([colorData isEqualToString:@"Green"])
     {
         return Green;
         
     }
-    if ([localTimeData isEqualToString:@"Orange"])
+    if ([colorData isEqualToString:@"Orange"])
     {
         return Orange;
         
     }
-    if ([localTimeData isEqualToString:@"Magenta"])
+    if ([colorData isEqualToString:@"Magenta"])
     {
         return Magenta;
         
     }
-    if ([localTimeData isEqualToString:@"Banana"])
+    if ([colorData isEqualToString:@"Banana"])
     {
         return Banana;
         
     }
-    if ([localTimeData isEqualToString:@"Red"])
+    if ([colorData isEqualToString:@"Red"])
     {
         return Red;
         
     }
-    if ([localTimeData isEqualToString:@"Black"])
+    if ([colorData isEqualToString:@"Black"])
     {
         return Black;
         
     }
-    if ([localTimeData isEqualToString:@"Aqua"])
+    if ([colorData isEqualToString:@"Aqua"])
     {
         return Aqua;
         
     }
-    if ([localTimeData isEqualToString:@"Tang"])
+    if ([colorData isEqualToString:@"Tang"])
     {
         return Tang;
+        
+    }
+    if ([colorData isEqualToString:@"Grape"])
+    {
+        return Grape;
+        
+    }
+    if ([colorData isEqualToString:@"Blueberry"])
+    {
+        return Blueberry;
+        
+    }
+    if ([colorData isEqualToString:@"Lemon"])
+    {
+        return Lemon;
+        
+    }
+    if ([colorData isEqualToString:@"Lime"])
+    {
+        return Lime;
+        
+    }
+    if ([colorData isEqualToString:@"Fern"])
+    {
+        return Fern;
+        
+    }
+    if ([colorData isEqualToString:@"Clover"])
+    {
+        return Clover;
+        
+    }
+    if ([colorData isEqualToString:@"Strawberry"])
+    {
+        return Strawberry;
         
     }
     else return White;
@@ -159,6 +194,41 @@
         return Tang;
         
     }
+    if ([colorData isEqualToString:@"Grape"])
+    {
+        return Grape;
+        
+    }
+    if ([colorData isEqualToString:@"Blueberry"])
+    {
+        return Blueberry;
+        
+    }
+    if ([colorData isEqualToString:@"Lemon"])
+    {
+        return Lemon;
+        
+    }
+    if ([colorData isEqualToString:@"Lime"])
+    {
+        return Lime;
+        
+    }
+    if ([colorData isEqualToString:@"Fern"])
+    {
+        return Fern;
+        
+    }
+    if ([colorData isEqualToString:@"Clover"])
+    {
+        return Clover;
+        
+    }
+    if ([colorData isEqualToString:@"Strawberry"])
+    {
+        return Strawberry;
+        
+    }
     else return Cyan;
 }
 -(NSColor *)TimeColor3 {
@@ -210,6 +280,41 @@
     if ([colorData isEqualToString:@"Tang"])
     {
         return Tang;
+        
+    }
+    if ([colorData isEqualToString:@"Grape"])
+    {
+        return Grape;
+        
+    }
+    if ([colorData isEqualToString:@"Blueberry"])
+    {
+        return Blueberry;
+        
+    }
+    if ([colorData isEqualToString:@"Lemon"])
+    {
+        return Lemon;
+        
+    }
+    if ([colorData isEqualToString:@"Lime"])
+    {
+        return Lime;
+        
+    }
+    if ([colorData isEqualToString:@"Fern"])
+    {
+        return Fern;
+        
+    }
+    if ([colorData isEqualToString:@"Clover"])
+    {
+        return Clover;
+        
+    }
+    if ([colorData isEqualToString:@"Strawberry"])
+    {
+        return Strawberry;
         
     }
     else return Cyan;
@@ -264,6 +369,41 @@
     if ([colorData isEqualToString:@"Tang"])
     {
         return Tang;
+        
+    }
+    if ([colorData isEqualToString:@"Grape"])
+    {
+        return Grape;
+        
+    }
+    if ([colorData isEqualToString:@"Blueberry"])
+    {
+        return Blueberry;
+        
+    }
+    if ([colorData isEqualToString:@"Lemon"])
+    {
+        return Lemon;
+        
+    }
+    if ([colorData isEqualToString:@"Lime"])
+    {
+        return Lime;
+        
+    }
+    if ([colorData isEqualToString:@"Fern"])
+    {
+        return Fern;
+        
+    }
+    if ([colorData isEqualToString:@"Clover"])
+    {
+        return Clover;
+        
+    }
+    if ([colorData isEqualToString:@"Strawberry"])
+    {
+        return Strawberry;
         
     }
     else return Cyan;
