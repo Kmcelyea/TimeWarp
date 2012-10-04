@@ -29,24 +29,24 @@
 #pragma mark -
 #pragma mark Rects
 
-#define BottomLeft NSMakeRect(0, 0, 326, 217)
-#define BottomLeftSlide NSMakeRect(326, 0, 390, 217)
-#define TopLeft NSMakeRect(0, 661, 326, 217)
-#define TopLeftSlide NSMakeRect(326, 661, 390, 217)
+#define BottomLeft NSMakeRect(0, 0, 336, 217)
+#define BottomLeftSlide NSMakeRect(336, 0, 390, 217)
+#define TopLeft NSMakeRect(0, 661, 336, 217)
+#define TopLeftSlide NSMakeRect(336, 661, 390, 217)
 
-#define BottomRight NSMakeRect(1114, 0, 326, 217)
+#define BottomRight NSMakeRect(1114, 0, 336, 217)
 #define BottomRightSlide NSMakeRect(724, 0, 390, 217)
-#define TopRight NSMakeRect(1114, 661, 326, 217)
+#define TopRight NSMakeRect(1114, 661, 336, 217)
 #define TopRightSlide NSMakeRect(724, 661, 390, 217)
 
 
-#define BottomLeftTicker NSMakeRect(0,217,326,41)
-#define TopLeftTicker NSMakeRect(0,620,326,41)
+#define BottomLeftTicker NSMakeRect(0,217,336,41)
+#define TopLeftTicker NSMakeRect(0,620,336,41)
 #define BottomRightTicker NSMakeRect(1114,217,326,41)
-#define TopRightTicker NSMakeRect(1114,620,326,41)
+#define TopRightTicker NSMakeRect(1114,620,336,41)
 
-#define BottomLeftBarClock NSMakeRect(0,258,326,79)
-#define TopLeftBarClock NSMakeRect(0,541,326,79)
-#define BottomRightBarClock NSMakeRect(1114,258,326,79)
-#define TopRightBarClock NSMakeRect(1114,541,326,79)
+#define BottomLeftBarClock NSMakeRect(0,258,336,79)
+#define TopLeftBarClock NSMakeRect(0,541,336,79)
+#define BottomRightBarClock NSMakeRect(1114,258,336,79)
+#define TopRightBarClock NSMakeRect(1114,541,336,79)
 #endif
