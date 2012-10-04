@@ -110,6 +110,28 @@
     [[KMConfiguration instance]saveSettings];
 }
 
+
+-(IBAction)SetOcean:(id)sender {
+    [[KMConfiguration instance]setLc:@"Cyan"];
+    [[KMConfiguration instance]setSc:@"Aqua"];
+    [[KMConfiguration instance]setTc:@"Aqua"];
+    [[KMConfiguration instance]setFc:@"Aqua"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
+    [[KMConfiguration instance]saveSettings];
+}
+
+-(IBAction)SetTang:(id)sender {
+    [[KMConfiguration instance]setLc:@"Tang"];
+    [[KMConfiguration instance]setSc:@"Tang"];
+    [[KMConfiguration instance]setTc:@"Tang"];
+    [[KMConfiguration instance]setFc:@"Tang"];
+    [[KMConfiguration instance]setColorChange:@"1"];
+    [[KMConfiguration instance]setColorChangeSlide:@"1"];
+    [[KMConfiguration instance]saveSettings];
+    
+}
+
 -(IBAction)InvertBackground:(id)sender{
     NSString * currentset = [[KMConfiguration instance]bg];
     if ([currentset isEqualToString:@"Black"]) {

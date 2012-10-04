@@ -24,7 +24,8 @@
 #define Magenta [NSColor colorWithCalibratedRed:255/255.0 green:0/255.0 blue:255/255.0 alpha:1.0]
 #define Banana [NSColor colorWithCalibratedRed:255/255.0 green:255/255.0 blue:102/255.0 alpha:1.0]
 #define Red [NSColor colorWithCalibratedRed:255/255.0 green:0/255.0 blue:0/255.0 alpha:1.0]
-
+#define Aqua [NSColor colorWithCalibratedRed:0/255.0 green:128/255.0 blue:255/255.0 alpha:1.0]
+#define Tang [NSColor colorWithCalibratedRed:255/255.0 green:128/255.0 blue:0/255.0 alpha:1.0]
 
 #pragma mark -
 #pragma mark Rects

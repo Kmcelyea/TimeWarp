@@ -20,7 +20,8 @@
 -(IBAction)SetMulti:(id)sender;
 -(IBAction)SetRed:(id)sender;
 -(IBAction)SetBlack:(id)sender;
-
+-(IBAction)SetOcean:(id)sender;
+-(IBAction)SetTang:(id)sender;
 
 -(IBAction)InvertBackground:(id)sender;
 @end

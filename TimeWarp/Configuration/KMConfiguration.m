@@ -96,6 +96,16 @@
         return Black;
         
     }
+    if ([localTimeData isEqualToString:@"Aqua"])
+    {
+        return Aqua;
+        
+    }
+    if ([localTimeData isEqualToString:@"Tang"])
+    {
+        return Tang;
+        
+    }
     else return White;
 }
 -(NSColor *)TimeColor2 {
@@ -137,6 +147,16 @@
     if ([colorData isEqualToString:@"Black"])
     {
         return Black;
+        
+    }
+    if ([colorData isEqualToString:@"Aqua"])
+    {
+        return Aqua;
+        
+    }
+    if ([colorData isEqualToString:@"Tang"])
+    {
+        return Tang;
         
     }
     else return Cyan;
@@ -182,6 +202,16 @@
         return Black;
         
     }
+    if ([colorData isEqualToString:@"Aqua"])
+    {
+        return Aqua;
+        
+    }
+    if ([colorData isEqualToString:@"Tang"])
+    {
+        return Tang;
+        
+    }
     else return Cyan;
 }
 -(NSColor *)TimeColor4 {
@@ -224,6 +254,16 @@
     if ([colorData isEqualToString:@"Black"])
     {
         return Black;
+        
+    }
+    if ([colorData isEqualToString:@"Aqua"])
+    {
+        return Aqua;
+        
+    }
+    if ([colorData isEqualToString:@"Tang"])
+    {
+        return Tang;
         
     }
     else return Cyan;
